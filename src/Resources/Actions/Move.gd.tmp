@@ -1,0 +1,79 @@
+extends Action
+
+var path_dict : Dictionary = {
+	path = [],
+	action = self,
+}
+var base : float = 0.5
+var agility_mod : float = 0.01
+var draw_at_point : PoolVector2Array = [Vector2()]
+var personal_space : RayCast2D = null
+
+signal path_requested(point_one, point_two)
+
+
+
+func _init() -> void:
+	yield(self, "owner_set")
+	get_body().connect("path_sent", self, "_on_path_sent")
+	connect("path_requested", get_body(), "_on_path_requested")
+
+
+func _selected(event : InputEvent) -> void:
+	request_path()
+	
+	if event.is_action_pressed("select"):
+		emit_signal("action_confirmed")
+
+
+func _confirmed() -> void:
+	get_path_finder().add_path(path_dict.action, path_dict.path)
+
+
+func _enter() -> void:
+	if not personal_space:
+		personal_space = RayCast2D.new()
+		personal_space.add_exception(get_path_finder())
+		get_path_finder().add_child(personal_space)
+
+
+func _exit() -> void:
+	get_path_finder().remove_path(self)
+	get_path_follower().unit_offset = 0
+	get_path_follower().offset = 0
+	personal_space.queue_free()
+
+
+func _handle_process(delta : float) -> void:
+	var agility : int = get_value_from_container("agility", "current")
+	
+	if not get_unit_offset() >= 0.99:
+		if personal_space.is_colliding() and personal_space.get_collider() is KinematicBody2D:
+			return
+		
+		get_path_follower().offset += (agility * 0.01) + base
+	else:
+		emit_signal("state_finished", "idle")
+
+
+func _handle_physics_process(delta : float) -> void:
+	personal_space.global_position = get_path_follower().global_position
+
+
+
+func request_path() -> void:
+	var current_path : Dictionary = get_current_path()
+	var full_path : Array = get_full_path()
+	
+	if current_path.empty() and full_path.empty():
+		emit_signal("path_requested", get_path_follower().global_position, get_mouse_position())
+	elif not current_path.empty() and full_path.empty():
+		emit_signal("path_requested", current_path.path.back(), get_mouse_position())
+	else:
+		var last_path : Dictionary = full_path.back()
+		emit_signal("path_requested", last_path.path.back(), get_mouse_position())
+
+
+
+func _on_path_sent(new_path : PoolVector2Array) -> void:
+	path_dict.path = new_path

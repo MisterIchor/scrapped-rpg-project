@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/graphics/limbs/long.png" type="Texture" id=1]
+[ext_resource path="res://assets/graphics/limbs/circle.png" type="Texture" id=2]
+[ext_resource path="res://src/Test/3d test/sprite3d.gd" type="Script" id=3]
+[ext_resource path="res://src/Test/3d test/generation/Camera.gd" type="Script" id=4]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform( 0.0472746, -0.131114, 0.996298, 0.848684, 0.00730356, -0.0554972, -2.17697e-08, 1.99569, 0.0656586, 0, 0.542, 0.00945812 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D12" type="Sprite3D" parent="."]
+transform = Transform( -0.0572894, -0.0984958, 0.997111, 1.49891, -0.00376456, 0.0381103, -2.23518e-08, 1.49675, 0.0657122, 0, 0.707035, 0.00945812 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform( 0.0376047, -0.063997, 0.996503, 0.698989, 0.003443, -0.0536106, -2.90107e-08, 0.997944, 0.0640895, -0.10367, 0.550924, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform( 0.111208, -0.0553404, 0.985151, 0.69111, 0.00890495, -0.158522, -3.84636e-08, 0.84815, 0.0659438, -0.168472, 0.384247, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D6" type="Sprite3D" parent="."]
+transform = Transform( 0.0333056, -0.0567717, 0.997253, 0.699207, 0.00270426, -0.0475026, -1.90688e-08, 0.998383, 0.0568361, 0.108745, 0.551, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D7" type="Sprite3D" parent="."]
+transform = Transform( 0.0919788, -0.0459363, 0.989856, 0.693931, 0.00608871, -0.131203, 3.03146e-08, 0.848736, 0.0545154, 0.173745, 0.383947, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D8" type="Sprite3D" parent="."]
+transform = Transform( 0.145707, -0.0572132, 0.985148, 0.888127, 0.00938647, -0.161624, -4.27477e-08, 0.998318, 0.0579781, 0.049791, 0.343436, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D9" type="Sprite3D" parent="."]
+transform = Transform( 0.216884, -0.0461637, 0.966904, 0.842532, 0.0118834, -0.2489, 3.72715e-08, 0.848662, 0.0560808, 0.0763285, 0.167914, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D10" type="Sprite3D" parent="."]
+transform = Transform( 0.154201, -0.0603503, 0.983363, 0.886692, 0.0104953, -0.171013, 2.68221e-08, 0.998122, 0.0612561, -0.05, 0.343, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite3D11" type="Sprite3D" parent="."]
+transform = Transform( 0.235117, -0.0497484, 0.961009, 0.837628, 0.013964, -0.269749, 2.9169e-08, 0.848428, 0.0607895, -0.076, 0.168, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.0520048, 0, -0.998647, 0, 1, 0, 0.998647, 0, -0.0520048, -1.75711, 0.639877, -0.10634 )
+current = true
+fov = 78.75
+script = ExtResource( 4 )

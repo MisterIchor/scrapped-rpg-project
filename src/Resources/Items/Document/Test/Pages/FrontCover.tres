@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/DataContainer/Items/Document/PageTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+page_title = "The Book of Testing"
+text = "This magical book will serve as a testing ground for new features. Don't leak this or I'll keel you."

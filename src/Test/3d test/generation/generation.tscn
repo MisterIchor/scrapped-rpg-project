@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Test/3d test/generation/generation.gd" type="Script" id=1]
+[ext_resource path="res://src/Test/3d test/generation/Camera.gd" type="Script" id=2]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 1, 1 )
+
+[sub_resource type="MultiMesh" id=2]
+transform_format = 1
+mesh = SubResource( 1 )
+
+[node name="Generation" type="Spatial"]
+script = ExtResource( 1 )
+map_size = Vector2( 10, 10 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.0132641, 0.999912, 0, -0.999912, 0.0132641, 0, 5.83543, 0 )
+script = ExtResource( 2 )
+
+[node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
+multimesh = SubResource( 2 )

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/BaseBody/Skeleton/LimbSectionTemplate.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="SphereMesh" id=4]
+radius = 0.1
+height = 0.2
+
+[resource]
+script = ExtResource( 1 )
+name = "Head"
+description = "It's your noggin. Take good care of it."
+icon = ExtResource( 2 )
+catagory = "head"
+health_base = 30
+defense_base = 0
+mesh = SubResource( 4 )
+collision_data = ""
+sound_bank = {
+}
+length = 25.0
+percentage_of_health = 1.0
+damage_to_soul_percentage = 1.0
+vital = true
+additional_equipment_slots = PoolStringArray( "eyes", "forehead" )
+penalties = [  ]
+add_penalty = false

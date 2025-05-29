@@ -1,0 +1,151 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/QuickMenu/QuickMenu.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "menu_transition"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+
+[node name="QuickMenu" type="Control"]
+margin_right = 113.0
+margin_bottom = 122.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuBackground" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuList" type="VBoxContainer" parent="MenuBackground"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 106.0
+margin_bottom = 115.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nickname" type="Label" parent="MenuBackground/MenuList"]
+margin_right = 99.0
+margin_bottom = 16.0
+size_flags_vertical = 3
+text = "%killername%"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="MenuBackground/MenuList"]
+margin_top = 20.0
+margin_right = 99.0
+margin_bottom = 36.0
+size_flags_vertical = 3
+
+[node name="ProfileButton" type="Button" parent="MenuBackground/MenuList"]
+margin_top = 40.0
+margin_right = 99.0
+margin_bottom = 60.0
+size_flags_vertical = 3
+text = "Profile"
+flat = true
+
+[node name="InvButton" type="Button" parent="MenuBackground/MenuList"]
+margin_top = 64.0
+margin_right = 99.0
+margin_bottom = 84.0
+size_flags_vertical = 3
+text = "Inventory"
+flat = true
+
+[node name="ActionsButton" type="Button" parent="MenuBackground/MenuList"]
+margin_top = 88.0
+margin_right = 99.0
+margin_bottom = 108.0
+size_flags_vertical = 3
+flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuBackground/MenuList/ActionsButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Space" type="MarginContainer" parent="MenuBackground/MenuList/ActionsButton/HBoxContainer"]
+margin_right = 21.0
+margin_bottom = 20.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="ActionLabel" type="Label" parent="MenuBackground/MenuList/ActionsButton/HBoxContainer"]
+margin_left = 25.0
+margin_top = 3.0
+margin_right = 73.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Actions"
+align = 1
+
+[node name="ArrowLabel" type="Label" parent="MenuBackground/MenuList/ActionsButton/HBoxContainer"]
+margin_left = 77.0
+margin_top = 3.0
+margin_right = 99.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "->"
+align = 2
+
+[node name="SoulMenuAnimation" type="AnimationPlayer" parent="."]
+anims/menu_transition = SubResource( 1 )
+
+[node name="QuickAction" type="PanelContainer" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -2.0
+margin_top = 23.0
+margin_right = 144.0
+margin_bottom = 61.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="QuickAction"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 139.0
+margin_bottom = 31.0
+
+[node name="OpenActionMenuButton" type="Button" parent="QuickAction/VBoxContainer"]
+margin_right = 132.0
+margin_bottom = 20.0
+text = "Open Action Menu"
+
+[node name="List" type="ItemList" parent="QuickAction/VBoxContainer"]
+margin_top = 24.0
+margin_right = 132.0
+margin_bottom = 24.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}

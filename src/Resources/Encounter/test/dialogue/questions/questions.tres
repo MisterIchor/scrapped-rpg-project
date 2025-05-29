@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/DialogueTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+dialogue = "\"Sure. Whacha wanna ask?\""
+answers = [ "res://src/Resources/Encounter/test/dialogue/questions/answers/ask_barter.tres", "res://src/Resources/Encounter/test/dialogue/questions/answers/ask_change_music.tres", "res://src/Resources/Encounter/test/dialogue/questions/answers/ask_directions.tres", "res://src/Resources/Encounter/test/dialogue/questions/answers/ask_rumors.tres", "res://src/Resources/Encounter/test/dialogue/questions/answers/done_asking.tres" ]
+answers_as_resource = false
+bg_screen = "BOX"
+mu_volume = 100
+mu_pitch = 100

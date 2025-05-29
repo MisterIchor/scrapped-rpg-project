@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/GlobalUI/SearchBar/SearchBar.gd" type="Script" id=1]
+
+[node name="SearchBar" type="PanelContainer"]
+margin_right = 484.0
+margin_bottom = 24.0
+script = ExtResource( 1 )
+
+[node name="PanelContainer" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 477.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="PanelContainer"]
+margin_right = 67.0
+margin_bottom = 24.0
+size_flags_vertical = 1
+text = "Search for:"
+valign = 1
+
+[node name="CatagoryButton" type="OptionButton" parent="PanelContainer"]
+margin_left = 102.0
+margin_right = 131.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 0.3
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer"]
+margin_left = 166.0
+margin_right = 470.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 1
+context_menu_enabled = false
+placeholder_text = "Type here..."
+caret_blink_speed = 0.5

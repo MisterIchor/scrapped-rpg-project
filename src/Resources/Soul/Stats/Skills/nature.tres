@@ -1,0 +1,29 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/SkillTemplate.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Nature"
+description = "During combat, animals are less likely to attack you and you can even attempt to tame them. A successful tame attempt puts them on your side for the rest of the battle. While travelling, you are less likely to encounter animals."
+icon = ExtResource( 2 )
+base = 0
+hide = false
+catagory = "Survival"
+formula = [ {
+"container_name": "wisdom",
+"operation": "add",
+"percentage_of_value": 5,
+"type": "arithmetic_with_stat",
+"value_name": "current"
+}, {
+"container_name": "charisma",
+"operation": "add",
+"percentage_of_value": 10,
+"type": "arithmetic_with_stat",
+"value_name": "current"
+} ]
+_add_type = 0
+unlockable_abilities = {
+}

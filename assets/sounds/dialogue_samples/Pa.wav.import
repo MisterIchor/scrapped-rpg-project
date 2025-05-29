@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pa.wav-3a89fa78e8300dceebe613e882523fce.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/Pa.wav"
+dest_files=[ "res://.import/Pa.wav-3a89fa78e8300dceebe613e882523fce.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

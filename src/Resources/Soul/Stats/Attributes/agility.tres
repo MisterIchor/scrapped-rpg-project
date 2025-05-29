@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/AttributeTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Agility"
+description = "Your reflexes and overall speed. A high agility is crucial to avoiding attacks. It affects your action points as well."
+shortened_name = "AGL"
+catagory = "Physical"
+base = 50
+hide = false
+display_as = 0

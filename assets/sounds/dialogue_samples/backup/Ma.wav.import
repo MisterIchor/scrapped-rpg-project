@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ma.wav-d28a2e9bd5abb88b8383b9ae7ed20b39.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/backup/Ma.wav"
+dest_files=[ "res://.import/Ma.wav-d28a2e9bd5abb88b8383b9ae7ed20b39.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

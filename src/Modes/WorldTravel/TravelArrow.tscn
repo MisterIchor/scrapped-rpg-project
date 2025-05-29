@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/graphics/travel/arrow_travel.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends KinematicBody2D
+
+var speed : float = 50
+var target : Vector2 = Vector2()
+var velocity : Vector2 = Vector2()
+var visibility : float = 1.0 setget set_visibility
+
+signal moving
+signal notmoving
+
+
+
+func _enter_tree() -> void:
+	set_visibility(0.5)
+
+
+func _input(event):
+	if event.is_action_pressed(\"ui_select\"):
+		target = get_global_mouse_position()
+
+
+func _physics_process(delta):
+	velocity = (target - position).normalized() * speed
+	
+	if (target - position).length() > 5:
+		emit_signal(\"moving\")
+		move_and_slide(velocity)
+	else:
+		emit_signal(\"notmoving\")
+
+
+
+func set_visibility(value : float) -> void:
+	visibility = value
+	$Camera2D.set_zoom(Vector2(value, value))
+"
+
+[node name="TravelArrow" type="KinematicBody2D"]
+script = SubResource( 1 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 0.126091, 14.099 )
+scale = Vector2( 0.129043, 0.11698 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+flip_v = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+__meta__ = {
+"_edit_lock_": true
+}

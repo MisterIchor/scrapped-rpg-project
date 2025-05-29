@@ -1,0 +1,155 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Entities/Character/Portrait/Portrait.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/GlobalUI/CharacterSheet/IncrementingText.gd" type="Script" id=2]
+[ext_resource path="res://src/GlobalUI/CharacterSheet/Personality/UnitRelationship.gd" type="Script" id=3]
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/ProgressBarColorChanging.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.478431, 0.478431, 0.478431, 1 )
+border_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.478431, 0.478431, 0.478431, 1 )
+border_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+
+[node name="UnitRelationship" type="PanelContainer"]
+margin_right = 440.0
+margin_bottom = 239.0
+rect_min_size = Vector2( 0, 120 )
+script = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 433.0
+margin_bottom = 232.0
+
+[node name="RelationshipColorBackground" type="ColorRect" parent="HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 225.0
+rect_pivot_offset = Vector2( 899, -76 )
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+color = Color( 0.478431, 0.478431, 0.478431, 1 )
+
+[node name="RelationshipLabel" type="Label" parent="HBoxContainer/RelationshipColorBackground"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = 112.5
+margin_right = 213.0
+margin_bottom = 136.5
+rect_rotation = -90.0
+text = "Neutral"
+align = 1
+valign = 1
+
+[node name="Picture" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 28.0
+margin_top = 0.0
+margin_right = 176.0
+margin_bottom = 225.0
+size_flags_stretch_ratio = 0.6
+
+[node name="RelationshipInfo" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 180.0
+margin_right = 426.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+
+[node name="Temperament" type="HBoxContainer" parent="HBoxContainer/RelationshipInfo"]
+margin_right = 246.0
+margin_bottom = 14.0
+
+[node name="TemperamentLabel" type="Label" parent="HBoxContainer/RelationshipInfo/Temperament"]
+margin_right = 94.0
+margin_bottom = 14.0
+text = "Temperament:"
+
+[node name="UnitTemperamentLabel" type="Label" parent="HBoxContainer/RelationshipInfo/Temperament"]
+margin_left = 98.0
+margin_right = 246.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Neutral"
+align = 1
+
+[node name="Status" type="HBoxContainer" parent="HBoxContainer/RelationshipInfo"]
+margin_top = 18.0
+margin_right = 246.0
+margin_bottom = 32.0
+
+[node name="StatusLabel" type="Label" parent="HBoxContainer/RelationshipInfo/Status"]
+margin_right = 43.0
+margin_bottom = 14.0
+text = "Status:"
+
+[node name="CurrentStatusLabel" type="Label" parent="HBoxContainer/RelationshipInfo/Status"]
+margin_left = 47.0
+margin_right = 246.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Inactive, seeking work"
+align = 1
+
+[node name="CurrentRelationship" type="HBoxContainer" parent="HBoxContainer/RelationshipInfo"]
+margin_top = 36.0
+margin_right = 246.0
+margin_bottom = 50.0
+
+[node name="RelationshipLabel" type="Label" parent="HBoxContainer/RelationshipInfo/CurrentRelationship"]
+margin_right = 134.0
+margin_bottom = 14.0
+text = "Current Relationship:"
+
+[node name="CurrentProgressBar" type="ProgressBar" parent="HBoxContainer/RelationshipInfo/CurrentRelationship"]
+margin_left = 138.0
+margin_right = 246.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_styles/fg = SubResource( 1 )
+step = 1.0
+value = 50.0
+percent_visible = false
+script = ExtResource( 4 )
+colors = PoolColorArray( 0.741176, 0, 0, 1, 0.427451, 0, 0, 1, 0.478431, 0.478431, 0.478431, 1, 0.258824, 0.258824, 0.470588, 1, 0, 0, 0.807843, 1 )
+
+[node name="IncrementingText" type="Label" parent="HBoxContainer/RelationshipInfo/CurrentRelationship/CurrentProgressBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "-1"
+align = 1
+script = ExtResource( 2 )
+
+[node name="OverallRelationship" type="HBoxContainer" parent="HBoxContainer/RelationshipInfo"]
+margin_top = 54.0
+margin_right = 246.0
+margin_bottom = 68.0
+
+[node name="Label2" type="Label" parent="HBoxContainer/RelationshipInfo/OverallRelationship"]
+margin_right = 133.0
+margin_bottom = 14.0
+text = "Overall Relationship:"
+
+[node name="OverallProgressBar" type="ProgressBar" parent="HBoxContainer/RelationshipInfo/OverallRelationship"]
+margin_left = 137.0
+margin_right = 246.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_styles/fg = SubResource( 2 )
+value = 50.0
+percent_visible = false
+script = ExtResource( 4 )
+colors = PoolColorArray( 0.741176, 0, 0, 1, 0.427451, 0, 0, 1, 0.478431, 0.478431, 0.478431, 1, 0.258824, 0.258824, 0.470588, 1, 0, 0, 0.807843, 1 )
+
+[node name="IncrementingText" type="Label" parent="HBoxContainer/RelationshipInfo/OverallRelationship/OverallProgressBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "-1"
+align = 1
+script = ExtResource( 2 )

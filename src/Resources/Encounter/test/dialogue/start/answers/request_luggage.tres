@@ -1,0 +1,31 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/AnswerTemplate.gd" type="Script" id=1]
+[ext_resource path="res://src/Resources/Encounter/test/dialogue/rob_him/rob_him.tres" type="Resource" id=2]
+[ext_resource path="res://src/Templates/Conditions/StatCheckTemplate.gd" type="Script" id=3]
+
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+skill_name = ""
+difficulty_check = 0
+target = "PARTY"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+skill_name = ""
+difficulty_check = 0
+target = "PARTY"
+
+[resource]
+script = ExtResource( 1 )
+dialogue = "Give me everything you've got."
+go_to = ExtResource( 2 )
+end_dialogue = false
+end_type = ""
+ins_skill_check_to_appear = SubResource( 1 )
+ins_dialogue_to_add = ""
+flag_name = ""
+flag_type = ""
+flag_action_if_checked = ""
+sc_settings = SubResource( 2 )

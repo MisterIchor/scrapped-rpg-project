@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ke.wav-3b5df24c2b2284e7868ca28696475b5c.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/backup/Ke.wav"
+dest_files=[ "res://.import/Ke.wav-3b5df24c2b2284e7868ca28696475b5c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

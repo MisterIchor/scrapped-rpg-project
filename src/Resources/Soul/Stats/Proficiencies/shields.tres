@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "Shields have existed long before the advent of firearms, being used in tandem with armor to provide protection from melee weapons and projectiles. Nowadays, shields are of limited use. 
+Shields range from personal protection against melee weapons and firearm rounds to mobile cover that your teammates can use, and they penalize the same stats as armor. Most shields also require a hand to use, limiting you to one-handed items."
+catagory = ""
+value_base = -1
+formula = PoolStringArray( "strength 5", "agility 10" )

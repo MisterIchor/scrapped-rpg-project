@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "Automatic handguns. Pull the trigger and several bullets fly out. Has a high fire rate, but good luck trying to control the recoil."
+catagory = "Side Arms"
+value_base = -1
+formula = PoolStringArray( "agility 5", "strength 10" )

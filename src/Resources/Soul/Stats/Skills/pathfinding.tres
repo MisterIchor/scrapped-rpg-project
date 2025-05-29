@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "Find secret landmarks and track something down using whatever senses you possess."
+catagory = "Survival"
+value_base = -1
+formula = PoolStringArray( "wisdom 8", "perception 7" )

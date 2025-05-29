@@ -1,0 +1,648 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "EnhancedObject",
+"class": "ActionScript",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Body/ActionSystem/ActionScript.gd"
+}, {
+"base": "CatagoryTemplate",
+"class": "ActionTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/Actions/ActionTemplate.gd"
+}, {
+"base": "ItemTemplate",
+"class": "AmmoTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Items/Ammo/AmmoTemplate.gd"
+}, {
+"base": "BaseTemplate",
+"class": "AnimationTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Animation/AnimationTemplate.gd"
+}, {
+"base": "Resource",
+"class": "AnswerTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Encounter/Dialogue/AnswerTemplate.gd"
+}, {
+"base": "ItemTemplate",
+"class": "ApparelTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Items/Apparel/ApparelTemplate.gd"
+}, {
+"base": "ApparelTemplate",
+"class": "ArmorTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Items/Apparel/Armor/ArmorTemplate.gd"
+}, {
+"base": "ValueTracker",
+"class": "Attribute",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Features/Statistics/Attribute.gd"
+}, {
+"base": "CatagoryTemplate",
+"class": "AttributeTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/Stats/AttributeTemplate.gd"
+}, {
+"base": "RigidBody2D",
+"class": "BaseBody",
+"language": "GDScript",
+"path": "res://src/Entities/BaseBody.gd"
+}, {
+"base": "RigidBody",
+"class": "BaseBody3D",
+"language": "GDScript",
+"path": "res://src/Test/3d test/Body3D/BaseBody3D.gd"
+}, {
+"base": "CatagoryTemplate",
+"class": "BaseBodyTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/BaseBodyTemplate.gd"
+}, {
+"base": "Resource",
+"class": "BaseConditionTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Conditions/BaseConditionTemplate.gd"
+}, {
+"base": "Resource",
+"class": "BaseTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/BaseTemplate.gd"
+}, {
+"base": "AttributeTemplate",
+"class": "CalculatedAttributeTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd"
+}, {
+"base": "ValueTracker",
+"class": "CalculatedValueTracker",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Features/CalculatedValueTracker.gd"
+}, {
+"base": "DisplayTemplate",
+"class": "CatagoryTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/CatagoryTemplate.gd"
+}, {
+"base": "EnhancedObject",
+"class": "DataContainer",
+"language": "GDScript",
+"path": "res://src/Global/DataContainer.gd"
+}, {
+"base": "Resource",
+"class": "DialogueTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Encounter/Dialogue/DialogueTemplate.gd"
+}, {
+"base": "BaseTemplate",
+"class": "DisplayTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/DisplayTemplate.gd"
+}, {
+"base": "Container",
+"class": "DocumentTabsContainer",
+"language": "GDScript",
+"path": "res://src/Entities/Items/DocumentsRevised/DocumentTabsContainer.gd"
+}, {
+"base": "ItemTemplate",
+"class": "DocumentTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Items/Document/DocumentTemplate.gd"
+}, {
+"base": "BaseTemplate",
+"class": "DocumentTextTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Items/Document/DocumentTextTemplate.gd"
+}, {
+"base": "Object",
+"class": "Draw",
+"language": "GDScript",
+"path": "res://src/Global/Draw.gd"
+}, {
+"base": "",
+"class": "Drink",
+"language": "GDScript",
+"path": "res://src/Entities/Items/Consumables/Refreshments/Drink/Drink.gd"
+}, {
+"base": "BaseTemplate",
+"class": "EncounterTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Encounter/EncounterTemplate.gd"
+}, {
+"base": "Object",
+"class": "EnhancedObject",
+"language": "GDScript",
+"path": "res://src/Global/EnhancedObject.gd"
+}, {
+"base": "DataContainer",
+"class": "EquipmentSystem",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Containers/EquipmentSystem.gd"
+}, {
+"base": "BaseTemplate",
+"class": "FactionTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/World/FactionTemplate.gd"
+}, {
+"base": "EnhancedObject",
+"class": "FileManager",
+"language": "GDScript",
+"path": "res://src/Global/FileManager.gd"
+}, {
+"base": "BaseConditionTemplate",
+"class": "FlagTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Conditions/FlagTemplate.gd"
+}, {
+"base": "",
+"class": "Food",
+"language": "GDScript",
+"path": "res://src/Entities/Items/Consumables/Refreshments/Food/Food.gd"
+}, {
+"base": "Label",
+"class": "IncrementingText",
+"language": "GDScript",
+"path": "res://src/GlobalUI/CharacterSheet/IncrementingText.gd"
+}, {
+"base": "EnhancedObject",
+"class": "Instruction",
+"language": "GDScript",
+"path": "res://src/Global/Parser/Instruction.gd"
+}, {
+"base": "TemplateContainer",
+"class": "Item",
+"language": "GDScript",
+"path": "res://src/Entities/Items/Item.gd"
+}, {
+"base": "BaseBodyTemplate",
+"class": "ItemTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Items/ItemTemplate.gd"
+}, {
+"base": "TemplateContainer",
+"class": "Landmark",
+"language": "GDScript",
+"path": "res://src/Modes/WorldTravel/Landmark.gd"
+}, {
+"base": "CatagoryTemplate",
+"class": "LandmarkTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/World/LandmarkTemplate.gd"
+}, {
+"base": "Spatial",
+"class": "Limb3D",
+"language": "GDScript",
+"path": "res://src/Test/3d test/Body3D/new folder/Limb3D.gd"
+}, {
+"base": "BaseBody3D",
+"class": "LimbGiblet3D",
+"language": "GDScript",
+"path": "res://src/Test/3d test/Body3D/new folder/LimbGiblet3D.gd"
+}, {
+"base": "BaseBodyTemplate",
+"class": "LimbGibletTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Skeleton/LimbGibletTemplate.gd"
+}, {
+"base": "Node",
+"class": "LimbGroup3D",
+"language": "GDScript",
+"path": "res://src/Test/3d test/Body3D/new folder/LimbGroup3D.gd"
+}, {
+"base": "BaseBody3D",
+"class": "LimbSection3D",
+"language": "GDScript",
+"path": "res://src/Test/3d test/Body3D/new folder/LimbSection3D.gd"
+}, {
+"base": "ValueTracker",
+"class": "LimbSectionContainer",
+"language": "GDScript",
+"path": "res://src/Test/3d test/Body3D/new folder/LimbSectionContainer.gd"
+}, {
+"base": "BaseBodyTemplate",
+"class": "LimbSectionTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Skeleton/LimbSectionTemplate.gd"
+}, {
+"base": "BaseTemplate",
+"class": "MapTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Encounter/Tactical/MapTemplate.gd"
+}, {
+"base": "DisplayTemplate",
+"class": "ModifierTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Modifier/ModifierTemplate.gd"
+}, {
+"base": "Control",
+"class": "Movable",
+"language": "GDScript",
+"path": "res://src/GlobalUI/Movable.gd"
+}, {
+"base": "EnhancedObject",
+"class": "NameGenerator",
+"language": "GDScript",
+"path": "res://src/Global/NameGenerator/NameGenerator.gd"
+}, {
+"base": "Control",
+"class": "Overlay",
+"language": "GDScript",
+"path": "res://src/Test/Overlay.gd"
+}, {
+"base": "EnhancedObject",
+"class": "Parser",
+"language": "GDScript",
+"path": "res://src/Global/Parser/Parser.gd"
+}, {
+"base": "ProgressBar",
+"class": "ProgressBarColorChanging",
+"language": "GDScript",
+"path": "res://src/Modes/Encounter/Tactical/HUD/ProgressBarColorChanging.gd"
+}, {
+"base": "BaseBody",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://src/Entities/Items/Weapons/Projectiles/Projectile.gd"
+}, {
+"base": "Resource",
+"class": "ProjectileTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Projectiles/ProjectileTemplate.gd"
+}, {
+"base": "CatagoryTemplate",
+"class": "RaceTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/Race/RaceTemplate.gd"
+}, {
+"base": "WeaponTemplate",
+"class": "RangedWeaponTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Items/Weapons/Ranged/RangedWeaponTemplate.gd"
+}, {
+"base": "Label",
+"class": "ScrollingText",
+"language": "GDScript",
+"path": "res://src/Modes/Encounter/Tactical/HUD/ScrollingText.gd"
+}, {
+"base": "LandmarkTemplate",
+"class": "SettlementTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/World/Landmarks/SettlementTemplate.gd"
+}, {
+"base": "Spatial",
+"class": "Skeleton3D",
+"language": "GDScript",
+"path": "res://src/Test/3d test/Body3D/new folder/Skeleton3D.gd"
+}, {
+"base": "BaseTemplate",
+"class": "SkeletonTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Skeleton/SkeletonTemplate.gd"
+}, {
+"base": "CalculatedValueTracker",
+"class": "Skill",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Features/Statistics/Skill.gd"
+}, {
+"base": "CalculatedAttributeTemplate",
+"class": "SkillTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/Stats/SkillTemplate.gd"
+}, {
+"base": "",
+"class": "Soul",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Soul/Soul.gd"
+}, {
+"base": "",
+"class": "SoulTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Soul/SoulTemplate.gd"
+}, {
+"base": "CalculatedValueTracker",
+"class": "Stat",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Features/Statistics/Stat.gd"
+}, {
+"base": "BaseConditionTemplate",
+"class": "StatCheckTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Conditions/StatCheckTemplate.gd"
+}, {
+"base": "DataContainer",
+"class": "TemplateContainer",
+"language": "GDScript",
+"path": "res://src/Global/Containers/TemplateContainer.gd"
+}, {
+"base": "TileTemplate",
+"class": "TileGroundTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Tiles/TileGroundTemplate.gd"
+}, {
+"base": "TileSet",
+"class": "TileSetTactical",
+"language": "GDScript",
+"path": "res://src/Modes/Encounter/Tactical/Map/TileSet/TileSetTactical.gd"
+}, {
+"base": "BaseBodyTemplate",
+"class": "TileTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Tiles/TileTemplate.gd"
+}, {
+"base": "BaseBody",
+"class": "TileWallBody",
+"language": "GDScript",
+"path": "res://src/Entities/Tiles/TileWallBody.gd"
+}, {
+"base": "TileTemplate",
+"class": "TileWallTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Tiles/TileWallTemplate.gd"
+}, {
+"base": "RayCast2D",
+"class": "Tracker",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Body/BaseTracker.gd"
+}, {
+"base": "CatagoryTemplate",
+"class": "TraitTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/Stats/TraitTemplate.gd"
+}, {
+"base": "BaseConditionTemplate",
+"class": "TypeCheckTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Conditions/TypeCheckTemplate.gd"
+}, {
+"base": "DisplayTemplate",
+"class": "TypeTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Types/TypeTemplate.gd"
+}, {
+"base": "Node",
+"class": "Unit",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Body/Unit.gd"
+}, {
+"base": "TemplateContainer",
+"class": "ValueTracker",
+"language": "GDScript",
+"path": "res://src/Entities/Character/Features/ValueTracker.gd"
+}, {
+"base": "ItemTemplate",
+"class": "WeaponTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/BaseBody/Items/Weapons/WeaponTemplate.gd"
+}, {
+"base": "DisplayTemplate",
+"class": "WorldTemplate",
+"language": "GDScript",
+"path": "res://src/Templates/Display/Catagory/World/WorldTemplate.gd"
+} ]
+_global_script_class_icons={
+"ActionScript": "",
+"ActionTemplate": "",
+"AmmoTemplate": "",
+"AnimationTemplate": "",
+"AnswerTemplate": "",
+"ApparelTemplate": "",
+"ArmorTemplate": "",
+"Attribute": "",
+"AttributeTemplate": "",
+"BaseBody": "",
+"BaseBody3D": "",
+"BaseBodyTemplate": "",
+"BaseConditionTemplate": "",
+"BaseTemplate": "",
+"CalculatedAttributeTemplate": "",
+"CalculatedValueTracker": "",
+"CatagoryTemplate": "",
+"DataContainer": "",
+"DialogueTemplate": "",
+"DisplayTemplate": "",
+"DocumentTabsContainer": "",
+"DocumentTemplate": "",
+"DocumentTextTemplate": "",
+"Draw": "",
+"Drink": "",
+"EncounterTemplate": "",
+"EnhancedObject": "",
+"EquipmentSystem": "",
+"FactionTemplate": "",
+"FileManager": "",
+"FlagTemplate": "",
+"Food": "",
+"IncrementingText": "",
+"Instruction": "",
+"Item": "",
+"ItemTemplate": "",
+"Landmark": "",
+"LandmarkTemplate": "",
+"Limb3D": "",
+"LimbGiblet3D": "",
+"LimbGibletTemplate": "",
+"LimbGroup3D": "",
+"LimbSection3D": "",
+"LimbSectionContainer": "",
+"LimbSectionTemplate": "",
+"MapTemplate": "",
+"ModifierTemplate": "",
+"Movable": "",
+"NameGenerator": "",
+"Overlay": "",
+"Parser": "",
+"ProgressBarColorChanging": "",
+"Projectile": "",
+"ProjectileTemplate": "",
+"RaceTemplate": "",
+"RangedWeaponTemplate": "",
+"ScrollingText": "",
+"SettlementTemplate": "",
+"Skeleton3D": "",
+"SkeletonTemplate": "",
+"Skill": "",
+"SkillTemplate": "",
+"Soul": "",
+"SoulTemplate": "",
+"Stat": "",
+"StatCheckTemplate": "",
+"TemplateContainer": "",
+"TileGroundTemplate": "",
+"TileSetTactical": "",
+"TileTemplate": "",
+"TileWallBody": "",
+"TileWallTemplate": "",
+"Tracker": "",
+"TraitTemplate": "",
+"TypeCheckTemplate": "",
+"TypeTemplate": "",
+"Unit": "",
+"ValueTracker": "",
+"WeaponTemplate": "",
+"WorldTemplate": ""
+}
+
+[application]
+
+run/main_scene="res://src/Modes/WorldTravel/TravelMap.tscn"
+
+[autoload]
+
+ConsoleSystem="*res://src/Global/Autoloads/ConsoleSystem.gd"
+LogSystem="*res://src/Global/Autoloads/LogSystem.gd"
+MusicSystem="*res://src/Global/Autoloads/MusicSystem.gd"
+PartySystem="*res://src/Global/Autoloads/PartySystem.gd"
+StorySystem="*res://src/Global/Autoloads/StorySystem.gd"
+Gambler="*res://src/Global/Gambler.gd"
+ModeSetter="*res://src/Global/Autoloads/ModeSetter.gd"
+Options="*res://src/Global/Autoloads/Options.gd"
+TimeSystem="*res://src/Global/Autoloads/TimeSystem.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[input]
+
+cam_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+cam_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+cam_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+cam_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+zoom_in={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+zoom_out={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+cam_rotate_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":81,"unicode":0,"echo":false,"script":null)
+ ]
+}
+cam_rotate_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+pause={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777217,"unicode":0,"echo":false,"script":null)
+ ]
+}
+open_quick_menu={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+next_turn={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777221,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_1={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":49,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_2={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":50,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_3={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":51,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_4={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":52,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_5={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":53,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_6={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":54,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_7={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":55,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_8={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":56,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p_member_9={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":57,"unicode":0,"echo":false,"script":null)
+ ]
+}
+select={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+action_modifier={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777238,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="unit"
+2d_physics/layer_2="projectile"
+2d_physics/layer_3="wall"
+2d_physics/layer_4="dropped_items"
+2d_physics/layer_28="floor4"
+2d_physics/layer_29="floor3"
+2d_physics/layer_30="floor2"
+2d_physics/layer_31="floor1"
+2d_physics/layer_32="ground_floor"
+
+[physics]
+
+common/physics_fps=240
+2d/default_gravity_vector=Vector2( 0, 0 )
+
+[rendering]
+
+environment/default_environment="res://better_env.tres"

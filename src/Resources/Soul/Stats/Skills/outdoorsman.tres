@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "The ability to survive in the wilderness, as well as general knowledge about geography."
+catagory = "Survival"
+value_base = 0
+formula = PoolStringArray( "wisdom 10", "intelligence 5" )

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Soul/SoulTemplate.gd" type="Script" id=1]
+[ext_resource path="res://src/Resources/Soul/Races/Human.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = {
+"first": "",
+"last": "",
+"nick": ""
+}
+generate_names_for_empty_fields = null
+race = ExtResource( 2 )
+level = null
+age = 23
+gender = null
+eye_color = Color( 0.623529, 1, 0.0156863, 1 )
+hair_color = Color( 0.317647, 0.317647, 1, 1 )
+attributes = null
+stats = null
+skills = null
+proficiencies = null

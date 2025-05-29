@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Test/TacticalMapTest/Navigation.gd" type="Script" id=1]
+[ext_resource path="res://src/Test/AI/AI Test.gd" type="Script" id=2]
+[ext_resource path="res://src/Entities/Character/Body/Unit.tscn" type="PackedScene" id=3]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 787.758, 608.282, 1076.93, 677.205, 31.1133, 686.194, 312.795, 605.286, 5.64212, 13.4547, 1063.45, 1.46822, 877.657, 104.851, 769.779, 100.356, 320.287, 92.8649, 225.893, 97.3599, 871.663, 560.337, 784.762, 567.828, 774.274, 513.889, 228.89, 546.852, 315.792, 543.855, 317.29, 515.387, 773.805, 512.41 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 4, 7, 8 ), PoolIntArray( 4, 8, 9 ), PoolIntArray( 6, 5, 1, 10 ), PoolIntArray( 10, 1, 0, 11 ), PoolIntArray( 11, 0, 12 ), PoolIntArray( 2, 4, 9, 13 ), PoolIntArray( 3, 2, 13, 14 ), PoolIntArray( 15, 3, 14 ), PoolIntArray( 15, 14, 8 ), PoolIntArray( 12, 15, 8, 16 ), PoolIntArray( 8, 7, 16 ), PoolIntArray( 12, 16, 11 ) ]
+outlines = [ PoolVector2Array( 5.64212, 13.4547, 1063.45, 1.46822, 1076.93, 677.205, 31.1133, 686.194 ), PoolVector2Array( 225.893, 97.3599, 320.287, 92.8649, 315.792, 543.855, 228.89, 546.852 ), PoolVector2Array( 871.663, 560.337, 784.762, 567.828, 773.805, 512.41, 769.779, 100.356, 877.657, 104.851 ), PoolVector2Array( 317.29, 515.387, 312.795, 605.286, 787.758, 608.282, 774.274, 513.889 ) ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 46.7604, 227.238 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 234.276, 47.3434 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+navpoly = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Body" parent="NavigationPolygonInstance" instance=ExtResource( 3 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 822.705, 329.714 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 276.324, 321.212 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 553.009, 560.498 )
+shape = SubResource( 3 )
+
+[node name="Navigation" type="Node" parent="."]
+script = ExtResource( 1 )

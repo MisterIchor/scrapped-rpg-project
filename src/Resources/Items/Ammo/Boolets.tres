@@ -1,0 +1,57 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/BaseBody/Items/Ammo/AmmoTemplate.gd" type="Script" id=1]
+[ext_resource path="res://src/Resources/Projectiles/Boolet.tres" type="Resource" id=2]
+[ext_resource path="res://assets/graphics/items/projectiles/bullet.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+name = "Boolets"
+description = "Super stronk boolet for very tiny peestol"
+catagory = "ammo"
+health_base = 30
+defense_base = 0
+sprite = ExtResource( 3 )
+collision_data = ""
+sound_bank = {
+"drop": [  ],
+"pickup": [  ]
+}
+display_exceptions = PoolStringArray( "sound_bank", "slots_occupied", "icon", "description", "catagory", "collision_data", "height", "sprite", "price_mod", "display_exceptions", "_body", "name" )
+base_price = -1
+weight = -1.0
+slots_occupied = {
+"bicep_left": false,
+"bicep_right": false,
+"calf_left": false,
+"calf_right": false,
+"chest": false,
+"elbow_left": false,
+"elbow_right": false,
+"eyes": false,
+"face": false,
+"foot_left": false,
+"foot_right": false,
+"forearm_left": false,
+"forearm_right": false,
+"hand_left": false,
+"hand_right": false,
+"head_top": false,
+"leg_left": false,
+"leg_right": false,
+"neck": false,
+"shoulder_left": false,
+"shoulder_right": false,
+"snout": false,
+"tail_base": false,
+"tail_tip": false,
+"thigh_left": false,
+"thigh_right": false,
+"torso": false,
+"wrist_left": false,
+"wrist_right": false
+}
+equip_type = 0
+reparable = true
+repair_formula = [  ]
+projectile = ExtResource( 2 )

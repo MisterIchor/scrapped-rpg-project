@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/DialogueTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+dialogue = "You sure as hell ain't. Get back to the start screen."
+answers = [ "res://src/Resources/Encounter/test/dialogue/leave_fail/answers/fuck.tres" ]
+answers_as_resource = false
+bg_screen = "BOX"
+mu_volume = 100
+mu_pitch = 100

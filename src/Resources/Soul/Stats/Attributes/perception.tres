@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/AttributeTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Perception"
+description = "The acuity of your senses. A high perception can save your life from dangerous threats such as a sneaking unit or a hidden trap."
+shortened_name = "PER"
+catagory = "Mental"
+base = 50
+hide = false
+display_as = 0

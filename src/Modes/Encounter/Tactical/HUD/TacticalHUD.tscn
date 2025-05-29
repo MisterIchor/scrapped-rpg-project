@@ -1,0 +1,194 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/LogBox/LogBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/TacticalHUD.gd" type="Script" id=2]
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/ScrollingText.gd" type="Script" id=3]
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/Party/CharacterStatus.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/PhaseBar.gd" type="Script" id=5]
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/TacticalHUD.gdshader" type="Shader" id=6]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 6 )
+shader_param/is_flashing = false
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.192157, 0.192157, 0.192157, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+anti_aliasing = false
+
+[sub_resource type="Animation" id=5]
+resource_name = "move_instructions"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("ActionInstructions:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 0.5, 0.5 ),
+"update": 0,
+"values": [ Vector2( 0, 548 ), Vector2( 0, 520 ) ]
+}
+
+[node name="TacticalHUD" type="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -720.0
+margin_right = 1280.0
+mouse_filter = 2
+script = ExtResource( 2 )
+
+[node name="ActionInstructions" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 548.0
+margin_right = -369.0
+margin_bottom = -144.0
+rect_clip_content = true
+
+[node name="Label" type="Label" parent="ActionInstructions"]
+margin_left = 399.233
+margin_top = 7.0
+margin_right = 1296.02
+margin_bottom = 21.0
+script = ExtResource( 3 )
+start_empty = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -176.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Party" type="PanelContainer" parent="HBoxContainer"]
+margin_right = 911.0
+margin_bottom = 176.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Party"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 904.0
+margin_bottom = 169.0
+scroll_vertical_enabled = false
+
+[node name="CharacterStatus" type="HBoxContainer" parent="HBoxContainer/Party/ScrollContainer"]
+margin_right = 897.0
+margin_bottom = 162.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 8
+
+[node name="EmptyStatus" parent="HBoxContainer/Party/ScrollContainer/CharacterStatus" instance=ExtResource( 4 )]
+margin_right = 105.0
+margin_bottom = 162.0
+size_flags_vertical = 3
+
+[node name="EmptyStatus2" parent="HBoxContainer/Party/ScrollContainer/CharacterStatus" instance=ExtResource( 4 )]
+margin_left = 113.0
+margin_right = 218.0
+margin_bottom = 162.0
+size_flags_vertical = 3
+
+[node name="EmptyStatus3" parent="HBoxContainer/Party/ScrollContainer/CharacterStatus" instance=ExtResource( 4 )]
+margin_left = 226.0
+margin_right = 331.0
+margin_bottom = 162.0
+size_flags_vertical = 3
+
+[node name="EmptyStatus4" parent="HBoxContainer/Party/ScrollContainer/CharacterStatus" instance=ExtResource( 4 )]
+margin_left = 339.0
+margin_right = 444.0
+margin_bottom = 162.0
+size_flags_vertical = 3
+
+[node name="EmptyStatus5" parent="HBoxContainer/Party/ScrollContainer/CharacterStatus" instance=ExtResource( 4 )]
+margin_left = 452.0
+margin_right = 557.0
+margin_bottom = 162.0
+size_flags_vertical = 3
+
+[node name="EmptyStatus6" parent="HBoxContainer/Party/ScrollContainer/CharacterStatus" instance=ExtResource( 4 )]
+margin_left = 565.0
+margin_right = 670.0
+margin_bottom = 162.0
+size_flags_vertical = 3
+
+[node name="EmptyStatus7" parent="HBoxContainer/Party/ScrollContainer/CharacterStatus" instance=ExtResource( 4 )]
+margin_left = 678.0
+margin_right = 783.0
+margin_bottom = 162.0
+size_flags_vertical = 3
+
+[node name="EmptyStatus8" parent="HBoxContainer/Party/ScrollContainer/CharacterStatus" instance=ExtResource( 4 )]
+margin_left = 791.0
+margin_right = 897.0
+margin_bottom = 162.0
+size_flags_vertical = 3
+
+[node name="LogBox" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 915.0
+margin_right = 1280.0
+margin_bottom = 176.0
+size_flags_stretch_ratio = 0.4
+
+[node name="PhaseBar" type="ProgressBar" parent="."]
+material = SubResource( 2 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -192.0
+margin_right = -2.0
+margin_bottom = 32.0
+rect_clip_content = true
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+step = 0.001
+percent_visible = false
+script = ExtResource( 5 )
+fill_speed = 5
+fill_colors = [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+fill_drain_if_disabled = false
+fill_enabled = false
+flash_enabled = false
+
+[node name="Label" type="Label" parent="PhaseBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 17.0
+text = "ACTION PHASE IN PROGRESS /// "
+valign = 1
+script = ExtResource( 3 )
+is_scrolling = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_process_mode = 0
+anims/move_instructions = SubResource( 5 )

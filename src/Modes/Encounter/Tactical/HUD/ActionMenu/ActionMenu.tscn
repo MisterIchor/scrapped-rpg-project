@@ -1,0 +1,115 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/ActionMenu/ActionMenu.gd" type="Script" id=1]
+[ext_resource path="res://ActionPreview.tscn" type="PackedScene" id=2]
+
+[node name="ActionMenu" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.219608 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -324.0
+margin_top = -224.0
+margin_right = 324.0
+margin_bottom = 224.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="PopupPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -220.0
+margin_right = 320.0
+margin_bottom = 220.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupPanel/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -312.0
+margin_top = -212.0
+margin_right = 312.0
+margin_bottom = 212.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Actions" type="VBoxContainer" parent="PopupPanel/ColorRect/HBoxContainer"]
+margin_right = 306.0
+margin_bottom = 424.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="ActionsLabel" type="Label" parent="PopupPanel/ColorRect/HBoxContainer/Actions"]
+margin_right = 306.0
+margin_bottom = 14.0
+text = "Actions"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="PopupPanel/ColorRect/HBoxContainer/Actions"]
+margin_top = 18.0
+margin_right = 306.0
+margin_bottom = 22.0
+mouse_filter = 2
+
+[node name="ActionList" type="ItemList" parent="PopupPanel/ColorRect/HBoxContainer/Actions"]
+margin_top = 26.0
+margin_right = 306.0
+margin_bottom = 424.0
+size_flags_vertical = 3
+allow_reselect = true
+
+[node name="VSeparator" type="VSeparator" parent="PopupPanel/ColorRect/HBoxContainer"]
+margin_left = 310.0
+margin_right = 314.0
+margin_bottom = 424.0
+
+[node name="Description" type="VBoxContainer" parent="PopupPanel/ColorRect/HBoxContainer"]
+margin_left = 318.0
+margin_right = 624.0
+margin_bottom = 424.0
+size_flags_horizontal = 3
+
+[node name="DescriptionLabel" type="Label" parent="PopupPanel/ColorRect/HBoxContainer/Description"]
+margin_right = 306.0
+margin_bottom = 14.0
+text = "Selected Action"
+align = 1
+valign = 1
+
+[node name="HSeparator2" type="HSeparator" parent="PopupPanel/ColorRect/HBoxContainer/Description"]
+margin_top = 18.0
+margin_right = 306.0
+margin_bottom = 22.0
+
+[node name="ActionPreview" parent="PopupPanel/ColorRect/HBoxContainer/Description" instance=ExtResource( 2 )]
+margin_top = 26.0
+margin_right = 306.0
+margin_bottom = 223.0
+size_flags_vertical = 3
+
+[node name="ActionDescriptionLabel" type="RichTextLabel" parent="PopupPanel/ColorRect/HBoxContainer/Description"]
+margin_top = 227.0
+margin_right = 306.0
+margin_bottom = 424.0
+size_flags_vertical = 3
+bbcode_enabled = true

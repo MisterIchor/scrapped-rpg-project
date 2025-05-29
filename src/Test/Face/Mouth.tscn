@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Test/Face/Mouth.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/appearance/lips.png" type="Texture" id=3]
+
+[node name="Mouth" type="TextureRect"]
+margin_right = 61.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+script = ExtResource( 1 )
+left_side_offset = 19
+right_side_offset = 1
+mid_offset = 10
+sec_amount = null
+sec_create_sections = null

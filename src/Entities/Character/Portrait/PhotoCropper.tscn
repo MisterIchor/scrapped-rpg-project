@@ -1,0 +1,133 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Entities/Character/Portrait/PhotoCropper.gd" type="Script" id=1]
+[ext_resource path="res://src/Entities/Character/Portrait/Westly_Willows.PNG" type="Texture" id=2]
+[ext_resource path="res://src/Entities/Character/Portrait/CropBox.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/character_creation/DefaultFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://src/Entities/Character/Portrait/PhotoBox.gd" type="Script" id=5]
+
+[node name="PhotoCropper" type="PopupPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -426.0
+margin_top = -191.0
+margin_right = 431.0
+margin_bottom = 201.0
+mouse_filter = 2
+popup_exclusive = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PhotoBox" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 849.0
+margin_bottom = 319.0
+mouse_filter = 2
+size_flags_vertical = 3
+script = ExtResource( 5 )
+
+[node name="SelectedPhoto" type="TextureRect" parent="VBoxContainer/PhotoBox"]
+margin_right = 422.0
+margin_bottom = 319.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="CropBox" type="ColorRect" parent="VBoxContainer/PhotoBox/SelectedPhoto"]
+margin_right = 210.0
+margin_bottom = 300.0
+color = Color( 1, 1, 1, 0 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+allow_zoom = true
+max_zoom = 1.05
+clamp_type = "INSIDE"
+
+[node name="PreviewPhoto" type="CenterContainer" parent="VBoxContainer/PhotoBox"]
+margin_left = 426.0
+margin_right = 849.0
+margin_bottom = 319.0
+size_flags_horizontal = 3
+
+[node name="Preview" type="ViewportContainer" parent="VBoxContainer/PhotoBox/PreviewPhoto"]
+margin_left = 106.0
+margin_top = 9.0
+margin_right = 316.0
+margin_bottom = 309.0
+mouse_filter = 2
+size_flags_horizontal = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="VBoxContainer/PhotoBox/PreviewPhoto/Preview"]
+size = Vector2( 210, 300 )
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/PhotoBox/PreviewPhoto/Preview/Viewport"]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="Camera2D" type="Camera2D" parent="VBoxContainer/PhotoBox/PreviewPhoto/Preview/Viewport/TextureRect"]
+current = true
+editor_draw_limits = true
+
+[node name="Instructions" type="Label" parent="VBoxContainer"]
+margin_top = 323.0
+margin_right = 849.0
+margin_bottom = 355.0
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.1
+custom_fonts/font = ExtResource( 4 )
+text = "Position the rectangle over the space you want your protrait to be."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Button" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 359.0
+margin_right = 849.0
+margin_bottom = 384.0
+mouse_filter = 2
+
+[node name="Create" type="Button" parent="VBoxContainer/Button"]
+margin_left = 137.0
+margin_right = 285.0
+margin_bottom = 25.0
+size_flags_horizontal = 6
+custom_fonts/font = ExtResource( 4 )
+text = "Create Portrait"
+
+[node name="Cancel" type="Button" parent="VBoxContainer/Button"]
+margin_left = 604.0
+margin_right = 670.0
+margin_bottom = 25.0
+size_flags_horizontal = 6
+custom_fonts/font = ExtResource( 4 )
+text = "Cancel"

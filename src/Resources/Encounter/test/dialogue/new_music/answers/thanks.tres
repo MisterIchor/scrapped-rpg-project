@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/AnswerTemplate.gd" type="Script" id=1]
+[ext_resource path="res://src/Resources/Encounter/test/dialogue/questions/questions.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+dialogue = "Thanks."
+go_to = ExtResource( 2 )
+end_dialogue = false
+end_type = ""
+flag_name = "music_changed"
+flag_type = ""
+flag_action_if_checked = ""
+sc_skill = ""
+sc_difficulty_check = 0
+sc_target = ""
+sc_show_check = null

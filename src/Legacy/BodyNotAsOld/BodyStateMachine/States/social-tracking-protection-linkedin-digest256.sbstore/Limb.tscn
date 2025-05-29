@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Entities/Character/Body/Skeleton/Limbs/Limb.gd" type="Script" id=1]
+
+
+
+[node name="Limb" type="Bone2D"]
+rotation = 0.045431
+script = ExtResource( 1 )
+number_of_sections = 0

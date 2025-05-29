@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ga.wav-a0bf21d969376a45e71fd5e1ab35fdbc.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/backup/Ga.wav"
+dest_files=[ "res://.import/Ga.wav-a0bf21d969376a45e71fd5e1ab35fdbc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

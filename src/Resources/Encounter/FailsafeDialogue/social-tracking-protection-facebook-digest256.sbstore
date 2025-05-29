@@ -1,0 +1,535 @@
+[docks]
+
+dock_3="Scene,Import"
+dock_4="FileSystem"
+dock_5="Inspector,Node"
+dock_filesystem_split=0
+dock_filesystem_display_mode=0
+dock_filesystem_file_list_display_mode=1
+dock_split_2=0
+dock_split_3=0
+dock_hsplit_1=0
+dock_hsplit_2=132
+dock_hsplit_3=-269
+dock_hsplit_4=0
+
+[EditorNode]
+
+open_scenes=[ "res://src/Modes/Encounter/Encounter.tscn" ]
+
+[ScriptEditor]
+
+open_scripts=[ {
+"path": "res://src/Modes/Encounter/Dialogue/UI/AnswerBox.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 11,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 22,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Templates/Encounter/Dialogue/AnswerTemplate.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 3,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 88,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Templates/Conditions/BaseConditionTemplate.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 18,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 13,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Entities/Physical/Character/Stats/Statistics/BaseStat.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 53,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Templates/BaseTemplate.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 17,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Modes/Encounter/Dialogue/UI/Box/Box.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 41,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 5,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Parser/Instructions/CalculateStats.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 56,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 19,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Parser/Instructions/CharacterInfoInstructions.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Autoloads/ConsoleSystem.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 35,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 100,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/DataContainer.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 16,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Modes/Encounter/Dialogue/Dialogue.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 53,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 44,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Modes/Encounter/Dialogue/UI/DialogueBox.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 14,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 64,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Modes/Encounter/Dialogue/UI/DialogueButton.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Templates/Encounter/Dialogue/DialogueTemplate.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 80,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 9,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Modes/Encounter/Dialogue/UI/DialogueUIBase.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 19,
+"scroll_position": 0.0,
+"selection": true,
+"selection_from_column": 0,
+"selection_from_line": 19,
+"selection_to_column": 83,
+"selection_to_line": 20,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Modes/Encounter/Encounter.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 29,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 66,
+"scroll_position": 45.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Templates/Encounter/EncounterTemplate.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 41,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 15,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/EnhancedObject.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 113,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Test/Face/Eye.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 93,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 96,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Templates/Conditions/FlagCheckTemplate.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 79,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 10,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Parser/Instructions/FlagInstructions.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 13,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Modes/Encounter/Dialogue/UI/Fullscreen/Fullscreen.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 18,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Gambler.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 14,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Test/HairSection.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Parser/Instruction.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 37,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 30,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Autoloads/LogSystem.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 26,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 9,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Entities/Physical/Character/Preset/MainStats.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Test/Face/Mouth.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 16,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 9,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Autoloads/MusicSystem.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Test/Node2D.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://Node2D.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 39,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 2,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Autoloads/Options.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 13,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Parser/Parser.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 12,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 39,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Autoloads/PartySystem.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 27,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 53,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Entities/Physical/Character/Soul/Soul.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 18,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Global/Parser/Instructions/StatCheckInstructions.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [ 22 ],
+"column": 52,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 22,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Templates/Conditions/StatCheckTemplate.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 15,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 1,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Entities/Physical/Character/StatManager.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 51,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+}, {
+"path": "res://src/Templates/Encounter/Tactical/Tile/TilePropertiesTemplate.gd",
+"state": {
+"bookmarks": [  ],
+"breakpoints": [  ],
+"column": 0,
+"folded_lines": PoolIntArray(  ),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+} ]
+open_help=[ "@GDScript", "Array", "ClassDB", "Curve2D", "Dictionary", "EditorInterface", "GDScript", "InputEventMIDI", "Node", "Object", "Path2D", "Rect2", "Reference", "Resource", "RichTextLabel", "SceneTree", "Script", "String", "Viewport" ]
+split_offset=70

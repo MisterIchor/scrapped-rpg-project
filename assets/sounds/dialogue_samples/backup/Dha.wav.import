@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dha.wav-1b4f9d4413e10b4bf214f67aac3b4261.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/backup/Dha.wav"
+dest_files=[ "res://.import/Dha.wav-1b4f9d4413e10b4bf214f67aac3b4261.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,68 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Entities/Physical/Character/Body/PathFollower.gd" type="Script" id=1]
+[ext_resource path="res://src/Entities/Physical/Character/Body/ActionSystem/ActionQueue.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://src/Resources/Soul/Actions/Move.gd" type="Script" id=4]
+[ext_resource path="res://src/Entities/Physical/Character/Tactical/Body/BodyStateMachine/States/Selected.gd" type="Script" id=5]
+[ext_resource path="res://src/Entities/Physical/Character/Body/PathFinder.gd" type="Script" id=6]
+[ext_resource path="res://src/Entities/Character/Body/Unit.gd" type="Script" id=7]
+[ext_resource path="res://src/Entities/Physical/Character/Body/SpriteBody.gd" type="Script" id=8]
+[ext_resource path="res://src/Entities/Physical/Character/Tactical/Body/BodyStateMachine/States/Idle.gd" type="Script" id=9]
+[ext_resource path="res://src/Entities/Physical/Character/Body/SelectionZone.gd" type="Script" id=10]
+
+
+[sub_resource type="Curve2D" id=1]
+bake_interval = 1.0
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 29.4121
+
+[node name="Body" type="Node"]
+script = ExtResource( 7 )
+
+[node name="PathFinder" type="Path2D" parent="."]
+curve = SubResource( 1 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PathFollower" type="PathFollow2D" parent="PathFinder"]
+loop = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SelectionZone" type="ColorRect" parent="PathFinder/PathFollower"]
+margin_left = -14.0
+margin_top = -15.0
+margin_right = 16.0
+margin_bottom = 15.0
+color = Color( 1, 1, 1, 0 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteBody" type="Sprite" parent="PathFinder/PathFollower"]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+script = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PathFinder/PathFollower/SpriteBody"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PathFinder/PathFollower/SpriteBody/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="StateMachine" type="Node" parent="PathFinder/PathFollower"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+state_list = [ ExtResource( 9 ), ExtResource( 5 ), ExtResource( 4 ) ]

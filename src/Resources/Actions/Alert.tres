@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://src/Templates/Display/Catagory/Actions/ActionTemplate.gd" type="Script" id=2]
+[ext_resource path="res://src/Entities/Character/Body/ActionSystem/ActionScripts/Target.gd" type="Script" id=3]
+
+[resource]
+script = ExtResource( 2 )
+name = "Alert"
+description = "Why are you reading this? This is supposed to be a default behavior."
+catagory = "other"
+icon = ExtResource( 1 )
+action_scripts = [ ExtResource( 3 ) ]
+configurable_values = {
+"Target.gd": {
+}
+}

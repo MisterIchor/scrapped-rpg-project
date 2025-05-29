@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/TraitTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Lightweight"
+description = "No matter what you do, you will always be on the light side. You have increased dodge and AP cost to move and turn are lowered. You take more damage, however."
+catagory = "Physical"
+modifiers = [  ]

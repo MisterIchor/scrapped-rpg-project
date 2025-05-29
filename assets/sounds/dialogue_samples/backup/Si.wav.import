@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Si.wav-c7d9387f7a2614fe6edcaf5e630fa2be.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/backup/Si.wav"
+dest_files=[ "res://.import/Si.wav-c7d9387f7a2614fe6edcaf5e630fa2be.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

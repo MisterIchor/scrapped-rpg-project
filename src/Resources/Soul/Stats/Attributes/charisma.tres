@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/AttributeTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Charisma"
+description = "Your personality and ability to influence others. A high charisma confers higher discounts when bartering and better results when persuading others."
+shortened_name = "CHA"
+catagory = "Mental"
+base = 50
+hide = false
+display_as = 0

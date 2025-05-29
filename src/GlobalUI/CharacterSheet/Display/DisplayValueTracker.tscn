@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/GlobalUI/CharacterSheet/Display/DisplayContainerValue.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/GlobalUI/CharacterSheet/Display/DisplayValueTracker.gd" type="Script" id=2]
+
+[node name="DisplayValueTracker" instance=ExtResource( 1 )]
+self_modulate = Color( 0, 0, 0, 1 )
+script = ExtResource( 2 )
+
+[node name="DetailsButton" type="Button" parent="." index="1"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.25 )
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 399.0
+margin_bottom = 27.0
+text = "--- Click for Details ---"
+flat = true

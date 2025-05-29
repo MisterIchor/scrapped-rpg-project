@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Modes/Encounter/Tactical/Map/TacticalMap/TacticalMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Modes/Encounter/Tactical/Characters.gd" type="Script" id=2]
+[ext_resource path="res://src/Resources/Tilemaps/TilemapSpawn.res" type="TileSet" id=3]
+[ext_resource path="res://src/Modes/Encounter/Tactical/TacticalScreen.gd" type="Script" id=4]
+[ext_resource path="res://src/Modes/Encounter/Tactical/EncounterCamera.gd" type="Script" id=5]
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/TacticalHUD.tscn" type="PackedScene" id=8]
+
+[node name="TacticalScreen" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="TacticalMap" parent="." instance=ExtResource( 1 )]
+tile_set = ExtResource( 3 )
+
+[node name="Characters" type="YSort" parent="."]
+script = ExtResource( 2 )
+
+[node name="EncounterCamera" type="Camera2D" parent="."]
+visible = false
+position = Vector2( 463.537, 140 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+process_mode = 0
+drag_margin_left = 1.0
+drag_margin_top = 1.0
+drag_margin_right = 1.0
+drag_margin_bottom = 1.0
+editor_draw_drag_margin = true
+script = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="EncounterCamera"]
+
+[node name="TacticalHUD" parent="EncounterCamera/CanvasLayer" instance=ExtResource( 8 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -360.0
+margin_right = 640.0
+margin_bottom = 360.0

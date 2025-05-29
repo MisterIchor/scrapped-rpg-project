@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "The Medicine skill aids in curing and identifying poisons and diseases as well as determining the effectiveness of medicine used to cure poisons and diseases.
+Without the proper medicine, this skill can only be used for identification. However, a successful check can prevent the spread of diseases without medicine."
+catagory = "Doctor"
+value_base = 0
+formula = PoolStringArray( "wisdom 10", "intelligence 5" )

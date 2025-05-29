@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Resources/Soul/Traits/Racial/Human/Versatility.tres" type="Resource" id=1]
+[ext_resource path="res://src/Templates/Display/Catagory/Race/RaceTemplate.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+name = ""
+description = ""
+name_list_male = "res://assets/namelists/human/male"
+name_list_female = "res://assets/namelists/human/female"
+attribute_modifiers = {
+
+}
+skill_modifiers = {
+
+}
+racial_traits = [ ExtResource( 1 ) ]
+racial_resistances = {
+
+}

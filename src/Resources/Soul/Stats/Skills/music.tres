@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "High party morale is crucial to success in the world of Shatterrock. 
+The ability to play music with an instrument you’re good at. "
+catagory = "Social"
+value_base = 0
+formula = PoolStringArray( "agility 15" )

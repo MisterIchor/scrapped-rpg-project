@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[resource]
+resource_name = "health"
+script = ExtResource( 1 )
+name = "Health"
+description = "A measurement of how much punishment you can take before becoming incapcitated."
+icon = ExtResource( 2 )
+catagory = "Core"
+shortened_name = "HP"
+base = 40
+hide = true
+formula = [ {
+"container_name": "strength",
+"operation": "add",
+"percentage_of_value": 30,
+"type": "arithmetic_with_stat",
+"value_name": "current"
+}, {
+"container_name": "enderance",
+"operation": "add",
+"percentage_of_value": 60,
+"type": "arithmetic_with_stat",
+"value_name": "current"
+}, {
+"operation": "divide",
+"type": "arithmetic",
+"value": 2
+} ]
+_add_type = 0

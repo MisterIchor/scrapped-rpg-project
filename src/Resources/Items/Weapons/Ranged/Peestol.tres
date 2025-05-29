@@ -1,0 +1,69 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/BaseBody/Items/Weapons/Ranged/RangedWeaponTemplate.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/items/weapons/handgun.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/items/weapons/GunIcon.png" type="Texture" id=3]
+[ext_resource path="res://src/Resources/Items/Ammo/Boolets.tres" type="Resource" id=5]
+[ext_resource path="res://assets/sounds/items/weapons/peestol/gunshot.wav" type="AudioStream" id=6]
+
+[resource]
+script = ExtResource( 1 )
+name = "Peestol"
+description = "You see Ivan, when test Peestol, you shall never fear the buggies, for promise of good code."
+catagory = "handgun"
+icon = ExtResource( 3 )
+sprite = ExtResource( 2 )
+collision_data = "res://assets/saved/collision_data/peestol.coldata"
+height = 5.0
+sound_bank = {
+"drop": [  ],
+"fire": [ ExtResource( 6 ) ],
+"pickup": [  ]
+}
+display_exceptions = PoolStringArray( "sound_bank", "slots_occupied", "icon", "description", "catagory", "collision_data", "height", "sprite", "price_mod", "display_exceptions", "_body", "name", "special", "ammo_type" )
+base_price = -1
+durability_max = -1
+weight = -1.0
+slots_occupied = {
+"bicep_left": false,
+"bicep_right": false,
+"calf_left": false,
+"calf_right": false,
+"chest": false,
+"elbow_left": false,
+"elbow_right": false,
+"eyes": false,
+"face": false,
+"foot_left": false,
+"foot_right": false,
+"forearm_left": false,
+"forearm_right": false,
+"hand_left": true,
+"hand_right": true,
+"head_top": false,
+"leg_left": false,
+"leg_right": false,
+"neck": false,
+"shoulder_left": false,
+"shoulder_right": false,
+"snout": false,
+"tail_base": false,
+"tail_tip": false,
+"thigh_left": false,
+"thigh_right": false,
+"torso": false,
+"wrist_left": false,
+"wrist_right": false
+}
+equip_type = 1
+reparable = true
+repair_formula = [  ]
+speed = 0.075
+damage = 0
+critical_chance = 0
+handling = 0
+penetration = 0
+length = 15.0
+special = [  ]
+ammo_type = ExtResource( 5 )
+ammo_capacity = 20

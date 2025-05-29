@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/GlobalUI/CharacterSheet/Inventory/ItemCatagory.tscn" type="PackedScene" id=1]
+
+[node name="ItemContainer" type="PanelContainer"]
+margin_left = 72.2719
+margin_top = 74.9446
+margin_right = 819.272
+margin_bottom = 464.945
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 740.0
+margin_bottom = 383.0
+tab_align = 0
+
+[node name="All" parent="TabContainer" instance=ExtResource( 1 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0

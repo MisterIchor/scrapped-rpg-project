@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/DialogueTemplate.gd" type="Script" id=1]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource( 1 )
+dialogue = "\"Nice try, buster. How about waiting until a later version? 
+
+ At least then, we can fight like men.\""
+answers = [ "res://src/Resources/Encounter/test/dialogue/rob_him/answers/succ.tres" ]
+answers_as_resource = false
+bg_screen = "BOX"
+mu_volume = 100
+mu_pitch = 100

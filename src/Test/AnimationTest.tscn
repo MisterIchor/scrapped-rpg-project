@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Entities/Character/Body/Skeleton/Limbs/Limb.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Test/AnimationTest.gd" type="Script" id=3]
+[ext_resource path="res://src/Test/Tween.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+playback_process_mode = 0
+script = ExtResource( 4 )
+tweens = [ {
+"ease_type": "In/Out",
+"node": NodePath("../Limb/LimbSection3/Front"),
+"property": "position",
+"time": 0.5,
+"to": Vector2( 24.7327, -3.64624 ),
+"transition": "Sine"
+}, {
+"ease_type": "In/Out",
+"node": NodePath("../Limb/LimbSection2/Front"),
+"property": "position",
+"time": 0.5,
+"to": Vector2( 9.72273, -21.9948 ),
+"transition": "Sine"
+}, {
+"ease_type": "In/Out",
+"node": NodePath("../Limb/LimbSection/Front"),
+"property": "position",
+"time": 0.5,
+"to": Vector2( -2.86792, -5.2702 ),
+"transition": "Sine"
+} ]
+tween_property = "position"
+tween_transition = "Sine"
+tween_ease_type = "In/Out"
+tween_time = 1.0
+tween_add_tween = null
+tween_refresh_properties = null
+test_set_default_variables = null
+test_play_animation = null
+
+[node name="Limb" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 0 )
+number_of_sections = 3
+
+[node name="LimbSection" parent="Limb" index="1"]
+position = Vector2( 0, -50 )
+end = NodePath("/root/EditorNode/@@592/@@593/@@601/@@603/@@607/@@611/@@612/@@613/@@629/@@630/@@639/@@640/@@6275/@@6109/@@6110/@@6111/@@6112/@@6113/Node2D/Limb/LimbSection2")
+
+[node name="LimbSection2" parent="Limb" index="2"]
+position = Vector2( 0, -25 )
+start = NodePath("/root/EditorNode/@@592/@@593/@@601/@@603/@@607/@@611/@@612/@@613/@@629/@@630/@@639/@@640/@@6275/@@6109/@@6110/@@6111/@@6112/@@6113/Node2D/Limb/LimbSection")
+end = NodePath("/root/EditorNode/@@592/@@593/@@601/@@603/@@607/@@611/@@612/@@613/@@629/@@630/@@639/@@640/@@6275/@@6109/@@6110/@@6111/@@6112/@@6113/Node2D/Limb/LimbSection3")
+
+[node name="LimbSection3" parent="Limb" index="3"]
+start = NodePath("/root/EditorNode/@@592/@@593/@@601/@@603/@@607/@@611/@@612/@@613/@@629/@@630/@@639/@@640/@@6275/@@6109/@@6110/@@6111/@@6112/@@6113/Node2D/Limb/LimbSection2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[editable path="Limb"]

@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Test/Face/Eye.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/limbs/circle.png" type="Texture" id=2]
+[ext_resource path="res://src/Test/Face/EyeLid.shader" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 3 )
+shader_param/blink_percentage = 0.0
+shader_param/mid = 0.5
+
+[node name="Eye" type="TextureRect"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_clip_content = true
+texture = ExtResource( 2 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+iris_size = Vector2( 64, 64 )
+iris_constraint = 15.0
+
+[node name="Iris" type="TextureRect" parent="."]
+self_modulate = Color( 0.172549, 0, 1, 1 )
+use_parent_material = true
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 95.9995
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 32, 32 )
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pupil" type="TextureRect" parent="Iris"]
+self_modulate = Color( 0, 0, 0, 1 )
+use_parent_material = true
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 48.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 16, 16 )
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EyeLid" type="TextureRect" parent="."]
+self_modulate = Color( 0.980392, 0.866667, 0.694118, 1 )
+material = SubResource( 1 )
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}

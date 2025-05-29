@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Modes/CharacterCreation/UI/SkillCatagory.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/character_creation/DefaultFont.tres" type="DynamicFont" id=2]
+
+
+
+
+
+
+
+
+[node name="SkillCatagory" type="VBoxContainer"]
+margin_top = 36.0
+margin_right = 474.0
+margin_bottom = 60.0
+script = ExtResource( 1 )
+
+[node name="Title" type="HBoxContainer" parent="."]
+margin_right = 474.0
+margin_bottom = 19.0
+alignment = 1
+
+[node name="Name" type="Label" parent="Title"]
+margin_right = 109.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+custom_fonts/font = ExtResource( 2 )
+align = 1
+valign = 1
+
+[node name="Space" type="MarginContainer" parent="Title"]
+margin_left = 113.0
+margin_right = 360.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+
+[node name="Value" type="Label" parent="Title"]
+margin_left = 364.0
+margin_right = 474.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+custom_fonts/font = ExtResource( 2 )
+text = "999%"
+align = 1
+valign = 1
+
+[node name="Skills" type="VBoxContainer" parent="."]
+visible = false
+margin_top = 28.0
+margin_right = 474.0
+margin_bottom = 93.0

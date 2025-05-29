@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Silent hill 2 menu sounds with cats [original].wav-8f03844c33af2ff8ddf2bfe2524e7ca8.sample"
+
+[deps]
+
+source_file="res://assets/music/battle/dynamic_test/Silent hill 2 menu sounds with cats [original].wav"
+dest_files=[ "res://.import/Silent hill 2 menu sounds with cats [original].wav-8f03844c33af2ff8ddf2bfe2524e7ca8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

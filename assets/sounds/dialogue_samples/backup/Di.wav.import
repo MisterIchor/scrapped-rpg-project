@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Di.wav-a6ac67186043ad73838f1f85d3149dd6.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/backup/Di.wav"
+dest_files=[ "res://.import/Di.wav-a6ac67186043ad73838f1f85d3149dd6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

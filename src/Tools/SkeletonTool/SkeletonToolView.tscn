@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Test/3d test/Body3D/new folder/Skeleton3D.gd" type="Script" id=1]
+
+[node name="SkeletonToolView" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.02735 )
+
+[node name="Skeleton3D" type="Spatial" parent="."]
+script = ExtResource( 1 )

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/SkillTemplate.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+name = "First Aid"
+description = "The First Aid skill is used to treat minor to moderate wounds such as lacerations, punctures, and bruises. Minor wounds can be healed without medical supplies, while moderate wounds do."
+icon = ExtResource( 1 )
+shortened_name = ""
+catagory = "Doctor"
+base = 0
+hide = false
+display_as = 0
+formula = [ {
+"container_name": "dexterity",
+"operation": "add",
+"percentage_of_value": 15,
+"type": "arithmetic_with_stat",
+"value_name": "current"
+} ]
+_add_type = 0
+unlockable_abilities = {
+}

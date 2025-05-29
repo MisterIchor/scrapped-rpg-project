@@ -1,0 +1,502 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/fonts/character_creation/DefaultFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/Entities/Character/Portrait/Portrait.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/fonts/cursive/Caramellia-K7dPW.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/fonts/Perfect DOS VGA 437.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://src/Modes/CharacterCreation/UI/TxtIDNumber.gd" type="Script" id=5]
+[ext_resource path="res://assets/fonts/character_creation/SmallTextFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://src/Modes/CharacterCreation/UI/TxtIssueDate.gd" type="Script" id=7]
+[ext_resource path="res://src/Modes/CharacterCreation/UI/IdentityCard.gd" type="Script" id=8]
+[ext_resource path="res://assets/portraits/HarryPortrait.PNG" type="Texture" id=9]
+[ext_resource path="res://src/Modes/CharacterCreation/UI/Signature.gd" type="Script" id=10]
+
+[sub_resource type="DynamicFont" id=7]
+size = 10
+extra_spacing_bottom = 3
+extra_spacing_char = 17
+extra_spacing_space = 1
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+extra_spacing_bottom = 3
+extra_spacing_space = 1
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 12
+use_mipmaps = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+
+
+void fragment() {
+	// Get the color from the texture
+	vec4 col = texture(TEXTURE,UV);
+	
+// Compute greyscale color (mean of red, green and blue)
+	float grey = (col.r + col.g + col.b) * 0.333;
+	
+// Apply greyscale color (same for red, green and blue, then we keep the same alpha)
+	COLOR = vec4(grey, grey, grey, col.a);
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+
+[node name="IdentityCard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 340, 220 )
+script = ExtResource( 8 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+self_modulate = Color( 0.478431, 0.478431, 0.478431, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -107.0
+margin_right = 170.0
+margin_bottom = 113.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 333.0
+margin_bottom = 213.0
+
+[node name="CardLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+margin_right = 326.0
+margin_bottom = 14.0
+text = "Union-issued Identification Card"
+align = 1
+valign = 1
+
+[node name="IDLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.152941 )
+use_parent_material = true
+margin_top = 18.0
+margin_right = 280.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 7 )
+text = "859534525"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+
+[node name="CardBackground" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 326.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Front" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground"]
+use_parent_material = true
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 319.0
+margin_bottom = 181.0
+mouse_filter = 2
+
+[node name="CharacterInfoPortrait" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front"]
+use_parent_material = true
+margin_right = 312.0
+margin_bottom = 155.0
+mouse_filter = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait"]
+use_parent_material = true
+margin_right = 142.0
+margin_bottom = 155.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Portrait" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer" instance=ExtResource( 2 )]
+use_parent_material = true
+margin_top = 0.0
+margin_right = 142.0
+margin_bottom = 155.0
+mouse_filter = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait"]
+margin_left = 146.0
+margin_right = 312.0
+margin_bottom = 155.0
+
+[node name="CharacterInformation" type="GridContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2"]
+use_parent_material = true
+margin_right = 166.0
+margin_bottom = 88.0
+mouse_filter = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="RaceLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation"]
+use_parent_material = true
+margin_right = 45.0
+margin_bottom = 19.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 1 )
+text = "Race:"
+valign = 1
+
+[node name="CharacterRace" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation"]
+use_parent_material = true
+margin_left = 71.0
+margin_right = 116.0
+margin_bottom = 19.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 1 )
+text = "Human"
+valign = 1
+
+[node name="Sex" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation"]
+use_parent_material = true
+margin_top = 23.0
+margin_right = 67.0
+margin_bottom = 42.0
+mouse_filter = 2
+size_flags_vertical = 4
+
+[node name="SexLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Sex"]
+use_parent_material = true
+margin_right = 36.0
+margin_bottom = 19.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "Sex:"
+valign = 1
+
+[node name="CharacterSex" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Sex"]
+use_parent_material = true
+margin_left = 40.0
+margin_right = 67.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "M"
+align = 1
+valign = 1
+
+[node name="Age" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation"]
+use_parent_material = true
+margin_left = 71.0
+margin_top = 23.0
+margin_right = 166.0
+margin_bottom = 42.0
+mouse_filter = 2
+size_flags_vertical = 4
+
+[node name="AgeLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Age"]
+use_parent_material = true
+margin_right = 36.0
+margin_bottom = 19.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "Age:"
+valign = 1
+
+[node name="CharacterAge" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Age"]
+use_parent_material = true
+margin_left = 40.0
+margin_right = 58.0
+margin_bottom = 19.0
+size_flags_horizontal = 0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "21"
+align = 1
+valign = 1
+
+[node name="Eyes" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation"]
+use_parent_material = true
+margin_top = 46.0
+margin_right = 67.0
+margin_bottom = 65.0
+mouse_filter = 2
+size_flags_vertical = 4
+
+[node name="EyeLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Eyes"]
+use_parent_material = true
+margin_right = 45.0
+margin_bottom = 19.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "Eyes:"
+valign = 1
+
+[node name="CharacterEyes" type="ColorRect" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Eyes"]
+use_parent_material = true
+margin_left = 49.0
+margin_right = 67.0
+margin_bottom = 19.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+color = Color( 0.313726, 0.137255, 0.137255, 1 )
+
+[node name="Hair" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation"]
+use_parent_material = true
+margin_left = 71.0
+margin_top = 46.0
+margin_right = 166.0
+margin_bottom = 65.0
+mouse_filter = 2
+size_flags_vertical = 4
+
+[node name="HairLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Hair"]
+use_parent_material = true
+margin_right = 45.0
+margin_bottom = 19.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "Hair:"
+valign = 1
+
+[node name="CharacterHairColor" type="ColorRect" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Hair"]
+use_parent_material = true
+margin_left = 49.0
+margin_right = 95.0
+margin_bottom = 19.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+color = Color( 0, 0, 0, 1 )
+
+[node name="Height" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation"]
+use_parent_material = true
+margin_top = 69.0
+margin_right = 67.0
+margin_bottom = 88.0
+mouse_filter = 2
+size_flags_vertical = 4
+
+[node name="HeightLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Height"]
+use_parent_material = true
+margin_right = 27.0
+margin_bottom = 19.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "HT:"
+valign = 1
+
+[node name="CharacterHeight" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Height"]
+use_parent_material = true
+margin_left = 31.0
+margin_right = 67.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "5'7\""
+align = 1
+valign = 1
+
+[node name="Weight" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation"]
+use_parent_material = true
+margin_left = 71.0
+margin_top = 69.0
+margin_right = 166.0
+margin_bottom = 88.0
+mouse_filter = 2
+size_flags_vertical = 4
+
+[node name="WeightLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Weight"]
+use_parent_material = true
+margin_right = 27.0
+margin_bottom = 19.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "WT:"
+valign = 1
+
+[node name="CharacterWeight" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/CharacterInformation/Weight"]
+use_parent_material = true
+margin_left = 31.0
+margin_right = 95.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 2 )
+text = "147 lbs"
+align = 1
+valign = 1
+
+[node name="Signature" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2"]
+margin_top = 92.0
+margin_right = 166.0
+margin_bottom = 144.0
+size_flags_stretch_ratio = 0.33
+script = ExtResource( 10 )
+
+[node name="TopLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/Signature"]
+use_parent_material = true
+margin_right = 166.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 47, 7 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Maximillian"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="BottomLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/CharacterInfoPortrait/VBoxContainer2/Signature"]
+visible = false
+use_parent_material = true
+margin_top = 56.0
+margin_right = 166.0
+margin_bottom = 108.0
+rect_pivot_offset = Vector2( 47, 7 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Ferocity"
+align = 2
+valign = 1
+
+[node name="Date" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front"]
+use_parent_material = true
+margin_top = 159.0
+margin_right = 312.0
+margin_bottom = 174.0
+mouse_filter = 2
+alignment = 2
+
+[node name="Issued" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/Date"]
+use_parent_material = true
+margin_right = 154.0
+margin_bottom = 15.0
+mouse_filter = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="IssuedLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/Date/Issued"]
+use_parent_material = true
+margin_left = 30.0
+margin_right = 66.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 6 )
+text = "Issued"
+valign = 2
+
+[node name="IssueDate" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/Date/Issued"]
+use_parent_material = true
+margin_left = 70.0
+margin_right = 124.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 6 )
+text = "10/31/378"
+valign = 2
+
+[node name="Expires" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Front/Date"]
+use_parent_material = true
+margin_left = 158.0
+margin_right = 312.0
+margin_bottom = 15.0
+mouse_filter = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="ExpiresLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/Date/Expires"]
+use_parent_material = true
+margin_left = 39.0
+margin_right = 57.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 6 )
+text = "Exp"
+valign = 2
+
+[node name="ExpireDate" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Front/Date/Expires"]
+use_parent_material = true
+margin_left = 61.0
+margin_right = 115.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 6 )
+text = "10/31/383"
+valign = 2
+
+[node name="Back" type="Control" parent="PanelContainer/VBoxContainer/CardBackground"]
+visible = false
+use_parent_material = true
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 273.0
+margin_bottom = 137.0
+rect_clip_content = true
+mouse_filter = 2
+
+[node name="Watermark" type="TextureRect" parent="PanelContainer/VBoxContainer/CardBackground/Back"]
+modulate = Color( 1, 1, 1, 0.419608 )
+material = SubResource( 6 )
+use_parent_material = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -210.0
+margin_top = -300.0
+margin_right = 210.0
+margin_bottom = 300.0
+mouse_filter = 2
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Back"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Back/VBoxContainer"]
+use_parent_material = true
+margin_top = 23.0
+margin_right = 266.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "The Union holds all rights to revoke ID cards.
+If problems arise, visit your local recruitment center."
+align = 1
+autowrap = true
+
+[node name="Created" type="HBoxContainer" parent="PanelContainer/VBoxContainer/CardBackground/Back/VBoxContainer"]
+use_parent_material = true
+margin_top = 115.0
+margin_right = 266.0
+margin_bottom = 130.0
+mouse_filter = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="CreatedLabel" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Back/VBoxContainer/Created"]
+use_parent_material = true
+margin_left = 80.0
+margin_right = 122.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 6 )
+text = "Created"
+valign = 2
+
+[node name="CharacterCreationDate" type="Label" parent="PanelContainer/VBoxContainer/CardBackground/Back/VBoxContainer/Created"]
+use_parent_material = true
+margin_left = 126.0
+margin_right = 186.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 6 )
+text = "10/21/2019"
+valign = 2
+script = ExtResource( 7 )

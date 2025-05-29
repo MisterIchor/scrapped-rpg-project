@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/CharacterInfo.gd" type="Script" id=1]
+
+[node name="CharacterInfo" type="VBoxContainer"]
+margin_right = 271.0
+margin_bottom = 68.0
+mouse_filter = 2
+script = ExtResource( 1 )
+containers = PoolStringArray( "SoulName soul_name", "Health current max", "Stamina current max", "BodyInfo action_queue" )

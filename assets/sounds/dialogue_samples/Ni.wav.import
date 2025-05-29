@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ni.wav-367e22de39a67c10c6f2a18325d2794e.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/Ni.wav"
+dest_files=[ "res://.import/Ni.wav-367e22de39a67c10c6f2a18325d2794e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

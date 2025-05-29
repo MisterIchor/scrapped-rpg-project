@@ -1,0 +1,5 @@
+[folding]
+
+node_unfolds=[ NodePath("."), PoolStringArray( "Margin", "Rect", "Script", "Size Flags" ), NodePath("ScrollContainer"), PoolStringArray( "Anchor", "Rect" ), NodePath("ScrollContainer/VBoxContainer"), PoolStringArray( "Margin", "Rect", "Size Flags" ) ]
+resource_unfolds=[  ]
+nodes_folded=[  ]

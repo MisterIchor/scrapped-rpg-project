@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://src/Templates/Display/Catagory/Actions/ActionTemplate.gd" type="Script" id=2]
+[ext_resource path="res://src/Entities/Character/Body/ActionSystem/ActionScripts/Move.gd" type="Script" id=3]
+[ext_resource path="res://src/Entities/Character/Body/ActionSystem/ActionScripts/Look.gd" type="Script" id=4]
+
+[resource]
+script = ExtResource( 2 )
+name = "Cautious Approach"
+description = "Move with caution, keeping your weapon ready at all times."
+icon = ExtResource( 1 )
+action_scripts = [ ExtResource( 4 ), ExtResource( 3 ) ]
+configurable_values = {
+"LookScript.gd": {
+},
+"MoveScript.gd": {
+"max_speed": 0.5
+}
+}

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Control.ogg-1fc2ab86bdfad2704e0c1c09d023fb9e.oggstr"
+
+[deps]
+
+source_file="res://assets/music/battle/dynamic_test/Control.ogg"
+dest_files=[ "res://.import/Control.ogg-1fc2ab86bdfad2704e0c1c09d023fb9e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/AttributeTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Intelligence"
+description = "General brain smarts, memorization, and ability to learn. A high intelligence allows you to learn harder spells and learn skills faster."
+shortened_name = "INT"
+catagory = "Mental"
+base = 50
+hide = false
+display_as = 0

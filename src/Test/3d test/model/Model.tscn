@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Test/3d test/model/Model.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleMesh" id=4]
+radius = 0.189
+mid_height = 0.388
+radial_segments = 6
+rings = 1
+
+[sub_resource type="SpatialMaterial" id=8]
+
+[sub_resource type="CapsuleMesh" id=5]
+radius = 0.164
+mid_height = 0.333
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CapsuleMesh" id=6]
+radius = 1.061
+mid_height = 0.3
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CapsuleMesh" id=7]
+radius = 1.072
+mid_height = 0.001
+radial_segments = 6
+rings = 1
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.433012, -0.25, 4.47035e-08, 0.0664605, 0.115113, 0.482008, -0.241004, -0.417431, 0.132921, 0, 1.067, -0.194 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.433012, -0.25, -9.93532e-08, 0.0293628, 0.0508576, 0.49654, -0.24827, -0.430016, 0.0587254, 0, 0.767, -0.273 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance10" type="MeshInstance" parent="."]
+transform = Transform( 0.433012, -0.25, 4.47035e-08, 0.0664605, 0.115113, 0.482008, -0.241004, -0.417431, 0.132921, 0, 0.502, -0.158 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance11" type="MeshInstance" parent="."]
+transform = Transform( 0.433012, -0.25, -9.93532e-08, 0.0293628, 0.0508576, 0.49654, -0.24827, -0.430016, 0.0587254, 0, 0.168, -0.225 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 0.433012, -0.25, 2.6077e-08, 0.0900928, 0.156045, -0.466404, 0.233202, 0.403918, 0.180185, 0, 1.06707, 0.194205 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 0.433012, -0.25, 9.93532e-08, 0.0293628, 0.0508576, -0.49654, 0.24827, 0.430016, 0.0587254, 0, 0.766654, 0.272787 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance8" type="MeshInstance" parent="."]
+transform = Transform( 0.433012, -0.25, 2.6077e-08, 0.0664605, 0.115113, -0.482008, 0.241004, 0.417432, 0.132921, 0, 0.502332, 0.158316 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance9" type="MeshInstance" parent="."]
+transform = Transform( 0.433012, -0.25, 9.93532e-08, 0.0293628, 0.0508576, -0.49654, 0.24827, 0.430016, 0.0587254, 0, 0.167547, 0.235373 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="."]
+transform = Transform( 0.108253, -0.0625, 3.82475e-09, 0, -5.46392e-09, -0.175, 0.0625, 0.108253, -6.62465e-09, 0, 1.04711, 0.0021448 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="."]
+transform = Transform( 0.108253, -0.0625, 2.73197e-09, 0, -5.46392e-09, -0.125, 0.0625, 0.108253, -4.73189e-09, 0, 0.744631, -0.00162373 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 8 )
+
+[node name="MeshInstance7" type="MeshInstance" parent="."]
+transform = Transform( 0.108253, -0.0625, 2.73197e-09, 0, -5.46392e-09, -0.125, 0.0625, 0.108253, -4.73189e-09, 0, 1.34688, 0 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 8 )
+
+[node name="DirectionalLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50465, 1.67119, -0.453155 )
+light_energy = 1.152
+light_indirect_energy = 1.198
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.038039, 0, 0.999276, 0, 1, 0, -0.999276, 0, 0.038039, 1.33465, 0.789875, 0 )
+current = true

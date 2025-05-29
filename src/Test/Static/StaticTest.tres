@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float gray = 0.0;
+uniform float static = 0.0;
+uniform float lines = 0.0;
+
+//varying vec2 size = vec2(32,32);
+
+
+
+void fragment() {
+	vec4 texel = texelFetch(TEXTURE, ivec2(32), 1);
+	
+	texel.rgb *= 0.0;
+//	COLOR = texture(TEXTURE, UV);
+//	COLOR.rgb = mix(vec3(0.5), COLOR.rgb, (1.0 - gray));
+}"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/gray = 0.0
+shader_param/static = 0.0
+shader_param/lines = 0.0

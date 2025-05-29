@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/SkillTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Athletics"
+description = "The ability to climb, swim, and run."
+base = 50
+hide = false
+catagory = "Other"
+formula = [  ]
+_add_type = 0
+unlockable_abilities = {
+}

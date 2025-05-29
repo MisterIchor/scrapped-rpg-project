@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Entities/Items/DocumentsOld/Page.gd" type="Script" id=1]
+
+[node name="Page" type="PanelContainer"]
+self_modulate = Color( 0.628906, 0.628906, 0.628906, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -300.0
+margin_right = 500.0
+margin_bottom = 300.0
+rect_pivot_offset = Vector2( 500, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+type = "Page"
+
+[node name="PageContainer" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 993.0
+margin_bottom = 593.0
+
+[node name="LeftPage" type="VBoxContainer" parent="PageContainer"]
+margin_right = 487.0
+margin_bottom = 586.0
+size_flags_horizontal = 3
+
+[node name="VSeparator" type="VSeparator" parent="PageContainer"]
+margin_left = 491.0
+margin_right = 495.0
+margin_bottom = 586.0
+
+[node name="RightPage" type="VBoxContainer" parent="PageContainer"]
+margin_left = 499.0
+margin_right = 986.0
+margin_bottom = 586.0
+size_flags_horizontal = 3

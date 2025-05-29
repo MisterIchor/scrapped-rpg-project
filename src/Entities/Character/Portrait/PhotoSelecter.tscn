@@ -1,0 +1,16 @@
+[gd_scene format=2]
+
+[node name="PhotoSelecter" type="FileDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -442.5
+margin_top = -283.0
+margin_right = 442.5
+margin_bottom = 283.0
+popup_exclusive = true
+window_title = "Select Photo"
+mode_overrides_title = false
+mode = 0
+filters = PoolStringArray( "*.png", "*.jpg" )

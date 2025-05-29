@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Encumberance"
+description = "How much weight you can bare before it hinders you."
+icon = ExtResource( 2 )
+shortened_name = ""
+catagory = "Other"
+base = 50
+hide = false
+display_as = 0
+formula = [ {
+"container_name": "strength",
+"operation": "add",
+"percentage_of_value": "150",
+"type": "arithmetic_with_stat",
+"value_name": "current"
+} ]
+_add_type = 0

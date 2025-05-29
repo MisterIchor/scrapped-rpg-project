@@ -1,0 +1,153 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assets/graphics/travel/plains.png" type="Texture" id=1]
+[ext_resource path="res://assets/graphics/travel/hills.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/travel/mountains.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/travel/road.png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/travel/road_turn.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/travel/sand.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/travel/snow.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/travel/swamp.png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/travel/water_swamp.png" type="Texture" id=9]
+[ext_resource path="res://assets/graphics/travel/water.png" type="Texture" id=10]
+[ext_resource path="res://assets/graphics/travel/woods.png" type="Texture" id=11]
+[ext_resource path="res://assets/graphics/travel/woods_end_bottom_right.png" type="Texture" id=12]
+[ext_resource path="res://assets/graphics/travel/woods_end_bottom_left.png" type="Texture" id=13]
+[ext_resource path="res://assets/graphics/travel/woods_end_left.png" type="Texture" id=14]
+[ext_resource path="res://assets/graphics/travel/woods_end_top_right.png" type="Texture" id=15]
+[ext_resource path="res://assets/graphics/travel/woods_end_top.png" type="Texture" id=16]
+[ext_resource path="res://assets/graphics/travel/woods_end_top_left.png" type="Texture" id=17]
+[ext_resource path="res://assets/graphics/travel/woods_end_right.png" type="Texture" id=18]
+[ext_resource path="res://assets/graphics/travel/woods_end_bottom.png" type="Texture" id=19]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[node name="Main" type="Node"]
+
+[node name="GrassyPlains" type="Sprite" parent="."]
+position = Vector2( 30, 30 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Hills" type="Sprite" parent="."]
+position = Vector2( 480, 30 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Mountains" type="Sprite" parent="."]
+position = Vector2( 430, 30 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Road" type="Sprite" parent="."]
+position = Vector2( 380, 30 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RoadTurn" type="Sprite" parent="."]
+position = Vector2( 330, 30 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sand" type="Sprite" parent="."]
+position = Vector2( 280, 30 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snow" type="Sprite" parent="."]
+position = Vector2( 230, 30 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Swamp" type="Sprite" parent="."]
+position = Vector2( 180, 30 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SwampWater" type="Sprite" parent="."]
+position = Vector2( 130, 30 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Water" type="Sprite" parent="."]
+position = Vector2( 80, 30 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WoodsMiddle" type="Sprite" parent="."]
+position = Vector2( 610, 110 )
+texture = ExtResource( 11 )
+
+[node name="WoodsEndBottomRight" type="Sprite" parent="."]
+position = Vector2( 660, 160 )
+texture = ExtResource( 12 )
+
+[node name="WoodsEndBottomLeft" type="Sprite" parent="."]
+position = Vector2( 560, 160 )
+texture = ExtResource( 13 )
+
+[node name="WoodsEndLeft" type="Sprite" parent="."]
+position = Vector2( 560, 110 )
+texture = ExtResource( 14 )
+
+[node name="WoodsEndTopRight" type="Sprite" parent="."]
+position = Vector2( 660, 60 )
+texture = ExtResource( 15 )
+
+[node name="WoodsEndTop" type="Sprite" parent="."]
+position = Vector2( 610, 60 )
+texture = ExtResource( 16 )
+
+[node name="WoodsEndTopLeft" type="Sprite" parent="."]
+position = Vector2( 560, 60 )
+texture = ExtResource( 17 )
+
+[node name="WoodsEndRight" type="Sprite" parent="."]
+position = Vector2( 660, 110 )
+texture = ExtResource( 18 )
+
+[node name="WoodsEndBottom" type="Sprite" parent="."]
+position = Vector2( 610, 160 )
+texture = ExtResource( 19 )
+

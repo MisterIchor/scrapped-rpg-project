@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Entities/Character/Body/Skeleton/Limbs/Limb.gd" type="Script" id=1]
+[ext_resource path="res://src/Entities/Character/Body/Skeleton/Limbs/LimbSection.tscn" type="PackedScene" id=2]
+
+
+
+
+[node name="Limb" type="Node2D"]
+position = Vector2( 14.748, -0.160881 )
+script = ExtResource( 1 )
+number_of_sections = 3
+
+[node name="LimbSection" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1.004, -49.9898 )
+end = NodePath("/root/EditorNode/@@592/@@593/@@601/@@603/@@607/@@611/@@612/@@613/@@629/@@630/@@639/@@640/@@6339/@@6178/@@6179/@@6180/@@6181/@@6182/Limb/LimbSection2")
+
+[node name="Front" parent="LimbSection" index="0"]
+position = Vector2( 1.18268, -24.972 )
+
+[node name="Sprite" parent="LimbSection" index="1"]
+position = Vector2( 0.591339, -12.486 )
+rotation = 4.75971
+scale = Vector2( 1, 1 )
+
+[node name="CollisionPolygon2D" parent="LimbSection" index="2"]
+position = Vector2( 0.591339, -12.486 )
+rotation = -1.52347
+
+[node name="LimbSection2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0.557566, -24.9938 )
+start = NodePath("/root/EditorNode/@@592/@@593/@@601/@@603/@@607/@@611/@@612/@@613/@@629/@@630/@@639/@@640/@@6339/@@6178/@@6179/@@6180/@@6181/@@6182/Limb/LimbSection")
+end = NodePath("/root/EditorNode/@@592/@@593/@@601/@@603/@@607/@@611/@@612/@@613/@@629/@@630/@@639/@@640/@@6339/@@6178/@@6179/@@6180/@@6181/@@6182/Limb/LimbSection3")
+
+[node name="Front" parent="LimbSection2" index="0"]
+position = Vector2( 0.446437, -24.996 )
+
+[node name="Sprite" parent="LimbSection2" index="1"]
+position = Vector2( 0.223218, -12.498 )
+rotation = 11.0134
+scale = Vector2( 1, 1 )
+
+[node name="CollisionPolygon2D" parent="LimbSection2" index="2"]
+position = Vector2( 0.223218, -12.498 )
+rotation = -1.55294
+
+[node name="LimbSection3" parent="." instance=ExtResource( 2 )]
+start = NodePath("/root/EditorNode/@@592/@@593/@@601/@@603/@@607/@@611/@@612/@@613/@@629/@@630/@@639/@@640/@@6339/@@6178/@@6179/@@6180/@@6181/@@6182/Limb/LimbSection2")
+
+[node name="Front" parent="LimbSection3" index="0"]
+position = Vector2( 0.557566, -24.9938 )
+
+[node name="Sprite" parent="LimbSection3" index="1"]
+position = Vector2( 0.278783, -12.4969 )
+rotation = 11.0179
+scale = Vector2( 1, 1 )
+
+[node name="CollisionPolygon2D" parent="LimbSection3" index="2"]
+position = Vector2( 0.278783, -12.4969 )
+rotation = -1.54849
+
+[editable path="LimbSection"]
+
+[editable path="LimbSection2"]
+
+[editable path="LimbSection3"]

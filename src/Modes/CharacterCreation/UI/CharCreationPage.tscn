@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Entities/Items/DocumentsOld/Page.gd" type="Script" id=1]
+
+
+
+[node name="Page" type="MarginContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -504.0
+margin_top = -315.0
+margin_right = 504.0
+margin_bottom = 315.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+type = "Page"
+
+[node name="Background" type="Panel" parent="."]
+margin_right = 1008.0
+margin_bottom = 630.0
+
+[node name="TextMargin" type="MarginContainer" parent="Background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -492.0
+margin_top = -303.0
+margin_right = 492.0
+margin_bottom = 303.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/TextMargin"]
+margin_right = 984.0
+margin_bottom = 606.0
+alignment = 1
+
+[node name="LeftPage" type="VBoxContainer" parent="Background/TextMargin/HBoxContainer"]
+margin_right = 486.0
+margin_bottom = 606.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="Background/TextMargin/HBoxContainer"]
+margin_left = 490.0
+margin_right = 494.0
+margin_bottom = 606.0
+
+[node name="RightPage" type="VBoxContainer" parent="Background/TextMargin/HBoxContainer"]
+margin_left = 498.0
+margin_right = 984.0
+margin_bottom = 606.0
+size_flags_horizontal = 3
+size_flags_vertical = 3

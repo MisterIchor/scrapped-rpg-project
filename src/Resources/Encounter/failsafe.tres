@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/AnswerTemplate.gd" type="Script" id=1]
+[ext_resource path="res://src/Resources/Encounter/test/dialogue/rob_him/rob_him.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+dialogue = "Give me everything you've got."
+go_to = ExtResource( 2 )
+end_dialogue = false
+end_type = ""

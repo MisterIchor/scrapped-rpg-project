@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/GlobalUI/CharacterSheet/CharacterInfo/Biography/Biography.gd" type="Script" id=1]
+
+[node name="Biography" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -779.0
+margin_bottom = -61.0
+script = ExtResource( 1 )
+
+[node name="VBoxBiography" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 494.0
+margin_bottom = 652.0
+mouse_filter = 2
+size_flags_vertical = 3
+
+[node name="BiographyLabel" type="Label" parent="VBoxBiography"]
+margin_right = 487.0
+margin_bottom = 14.0
+text = "Biography"
+align = 1
+uppercase = true
+
+[node name="EditButton" type="Button" parent="VBoxBiography/BiographyLabel"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.25 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -10.0
+margin_bottom = 10.0
+mouse_filter = 1
+toggle_mode = true
+text = "--- edit ---"
+flat = true
+
+[node name="HSeparator" type="HSeparator" parent="VBoxBiography"]
+margin_top = 18.0
+margin_right = 487.0
+margin_bottom = 22.0
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxBiography"]
+margin_top = 26.0
+margin_right = 487.0
+margin_bottom = 645.0
+mouse_filter = 2
+size_flags_vertical = 3
+
+[node name="DisplayBiographyLabel" type="Label" parent="VBoxBiography/ScrollContainer"]
+margin_right = 487.0
+margin_bottom = 619.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "What the fuck did you just fucking say about me, you little bitch? I'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I'm the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You're fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that's just with my bare hands. Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little \"clever\" comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn't, you didn't, and now you're paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You're fucking dead, kiddo."
+autowrap = true

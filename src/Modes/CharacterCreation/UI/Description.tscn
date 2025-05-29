@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/fonts/character_creation/ContainerFont.tres" type="DynamicFont" id=1]
+
+
+[node name="Description" type="PanelContainer"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = 41.0
+margin_right = 486.0
+margin_bottom = 263.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.85
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 479.0
+margin_bottom = 215.0
+
+[node name="DescriptionLabel" type="Label" parent="VBoxContainer"]
+margin_right = 472.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Description"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 472.0
+margin_bottom = 34.0
+
+[node name="DescriptionContainer" type="PanelContainer" parent="VBoxContainer"]
+self_modulate = Color( 0.45098, 0.45098, 0.45098, 1 )
+margin_top = 38.0
+margin_right = 472.0
+margin_bottom = 208.0
+size_flags_vertical = 3
+
+[node name="Description" type="Label" parent="VBoxContainer/DescriptionContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 465.0
+margin_bottom = 163.0
+size_flags_vertical = 3

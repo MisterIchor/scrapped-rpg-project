@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Vu.wav-d162bc028e6eaf731394b7930889667e.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/Vu.wav"
+dest_files=[ "res://.import/Vu.wav-d162bc028e6eaf731394b7930889667e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

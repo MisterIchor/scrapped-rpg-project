@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/SkillTemplate.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Divinity"
+description = "The ability to recall information about the religions of the world, their gods, and the various planes of existence."
+icon = ExtResource( 2 )
+base = 0
+hide = false
+catagory = "Knowledge"
+formula = [ {
+"container_name": "wisdom",
+"operation": "add",
+"percentage_of_value": 15,
+"type": "arithmetic_with_stat",
+"value_name": "current"
+} ]
+_add_type = 0
+unlockable_abilities = {
+}

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "Handguns that use a revolving cylinder to hold ammo. Revolvers pack a punch but can’t fire as fast as a pistol."
+catagory = "Side Arms"
+value_base = 0
+formula = PoolStringArray( "agility 7", "strength 8" )

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/AttributeTemplate.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/character_creation/id_picture_placeholder.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Strength"
+description = "Your bodily strength. A high strength grants a bonus to damage with melee weapons and defense while a low defense hinders it. Strength also determines the maximum carry capacity for your character."
+icon = ExtResource( 2 )
+catagory = "Physical"
+shortened_name = "STR"
+base = 50
+hide = false

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/DialogueTemplate.gd" type="Script" id=1]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource( 1 )
+dialogue = "\"Nah. That feature isn't implemented yet. 
+
+Tell the creator to do something about it, will ya?\""
+answers = [ "res://src/Resources/Encounter/test/dialogue/barter/answers/no_barter.tres" ]
+answers_as_resource = false
+bg_screen = "BOX"
+mu_volume = 100
+mu_pitch = 100

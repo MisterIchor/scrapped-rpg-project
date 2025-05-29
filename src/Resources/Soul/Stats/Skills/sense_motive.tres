@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "Not every situation is going to be clear to you. Sometimes you get the feeling something is off or someone may be telling some false info. The Sense Motive skill allows you to get a hunch of a situation and detect deception whether it is verbal or written.
+The sense motive skill is used against deception checks, as well as determining the danger level of a location or unit."
+catagory = "Instinct"
+value_base = 0
+formula = PoolStringArray( "wisdom 15" )

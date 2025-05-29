@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/AttributeTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Wisdom"
+description = "Your common sense and willpower. A high wisdom prevents spell fatigue, lowers morale loss, and can save you from mind-affecting effects."
+shortened_name = "WIS"
+catagory = "Mental"
+base = 50
+hide = false
+display_as = 0

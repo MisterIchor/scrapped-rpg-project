@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Entities/Items/DocumentsRevised/Section.gd" type="Script" id=1]
+
+[node name="Section" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="HBoxContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+
+[node name="Separator" type="VSeparator" parent="Container"]
+visible = false
+margin_right = 4.0
+margin_bottom = 720.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+
+[node name="Label" type="RichTextLabel" parent="Container"]
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_active = false

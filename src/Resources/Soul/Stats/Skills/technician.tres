@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+name = ""
+description = "Create various gadgets like motion trackers and noisemakers."
+icon = ExtResource( 1 )
+base = 50
+hide = false
+catagory = "Crafting"
+formula = [ "intelligence 15" ]
+_add_type = 0

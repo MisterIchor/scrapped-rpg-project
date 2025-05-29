@@ -1,0 +1,181 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Modes/Crawl/Scripts/MapScreen.gd" type="Script" id=1]
+[ext_resource path="res://src/Modes/Crawl/MapTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://src/Modes/Crawl/MapTileset.gd" type="Script" id=4]
+[ext_resource path="res://src/Modes/Crawl/MapGenerator.gd" type="Script" id=5]
+
+[sub_resource type="GDScript" id=1]
+
+[node name="MapScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.29236
+margin_right = -1.29236
+script = ExtResource( 1 )
+
+[node name="MapGenerator" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="MapBackground" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_left = 1.29236
+margin_right = 1.29236
+margin_bottom = 576.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapTileset" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_custom_transform = Transform2D( 16, 16, 0, 1, 16, 0 )
+cell_tile_origin = 1
+format = 1
+script = ExtResource( 4 )
+
+[node name="Map" type="Control" parent="."]
+anchor_right = 1.0
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlPanel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -538.0
+margin_top = -116.0
+margin_right = 540.0
+margin_bottom = -11.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="ControlPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -529.0
+margin_top = -42.5
+margin_right = 529.0
+margin_bottom = 42.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlPanel/MarginContainer"]
+margin_right = 1058.0
+margin_bottom = 85.0
+
+[node name="Options" type="HBoxContainer" parent="ControlPanel/MarginContainer/VBoxContainer"]
+margin_right = 1058.0
+margin_bottom = 38.0
+
+[node name="MapType" type="VBoxContainer" parent="ControlPanel/MarginContainer/VBoxContainer/Options"]
+margin_right = 261.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ControlPanel/MarginContainer/VBoxContainer/Options/MapType"]
+margin_right = 261.0
+margin_bottom = 14.0
+text = "MapType"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="ControlPanel/MarginContainer/VBoxContainer/Options/MapType"]
+margin_top = 18.0
+margin_right = 261.0
+margin_bottom = 38.0
+text = "Cave"
+align = 1
+items = [ "Cave", null, false, 0, null, "Fort", null, false, 1, null, "Dungeon", null, false, 2, null ]
+selected = 0
+
+[node name="MapSize" type="VBoxContainer" parent="ControlPanel/MarginContainer/VBoxContainer/Options"]
+margin_left = 265.0
+margin_right = 527.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ControlPanel/MarginContainer/VBoxContainer/Options/MapSize"]
+margin_right = 262.0
+margin_bottom = 14.0
+text = "MapSize"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="ControlPanel/MarginContainer/VBoxContainer/Options/MapSize"]
+margin_top = 18.0
+margin_right = 262.0
+margin_bottom = 38.0
+text = "Big"
+align = 1
+items = [ "Big", null, false, 0, null, "Medium", null, false, 1, null, "Small", null, false, 2, null, "Tiny", null, false, 3, null ]
+selected = 0
+
+[node name="MapIntensity" type="VBoxContainer" parent="ControlPanel/MarginContainer/VBoxContainer/Options"]
+margin_left = 531.0
+margin_right = 792.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ControlPanel/MarginContainer/VBoxContainer/Options/MapIntensity"]
+margin_right = 261.0
+margin_bottom = 14.0
+text = "MapIntensity"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="ControlPanel/MarginContainer/VBoxContainer/Options/MapIntensity"]
+margin_top = 18.0
+margin_right = 261.0
+margin_bottom = 38.0
+text = "Swarming"
+align = 1
+items = [ "Swarming", null, false, 0, null, "High", null, false, 1, null, "Medium", null, false, 2, null, "Low", null, false, 3, null, "Barren", null, false, 4, null ]
+selected = 0
+
+[node name="MapDifficulty" type="VBoxContainer" parent="ControlPanel/MarginContainer/VBoxContainer/Options"]
+margin_left = 796.0
+margin_right = 1058.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ControlPanel/MarginContainer/VBoxContainer/Options/MapDifficulty"]
+margin_right = 262.0
+margin_bottom = 14.0
+text = "MapDifficulty"
+align = 1
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="ControlPanel/MarginContainer/VBoxContainer/Options/MapDifficulty"]
+margin_top = 18.0
+margin_right = 262.0
+margin_bottom = 38.0
+text = "Extreme"
+align = 1
+items = [ "Extreme", null, false, 0, null, "Hard", null, false, 1, null, "Normal", null, false, 2, null, "Easy", null, false, 3, null, "Beginner", null, false, 4, null ]
+selected = 0
+
+[node name="MiddleSpace" type="MarginContainer" parent="ControlPanel/MarginContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 1058.0
+margin_bottom = 61.0
+size_flags_vertical = 3
+
+[node name="GenerateButton" type="Button" parent="ControlPanel/MarginContainer/VBoxContainer"]
+margin_left = 493.0
+margin_top = 65.0
+margin_right = 564.0
+margin_bottom = 85.0
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.25
+text = "Generate"
+
+[connection signal="item_selected" from="ControlPanel/MarginContainer/VBoxContainer/Options/MapType/OptionButton" to="." method="_on_MapType_selected"]
+[connection signal="item_selected" from="ControlPanel/MarginContainer/VBoxContainer/Options/MapSize/OptionButton" to="." method="_on_MapSize_selected"]
+[connection signal="item_selected" from="ControlPanel/MarginContainer/VBoxContainer/Options/MapIntensity/OptionButton" to="." method="_on_MapIntensity_selected"]
+[connection signal="item_selected" from="ControlPanel/MarginContainer/VBoxContainer/Options/MapDifficulty/OptionButton" to="." method="_on_MapDifficulty_selected"]
+[connection signal="pressed" from="ControlPanel/MarginContainer/VBoxContainer/GenerateButton" to="." method="_on_GenerateButton_pressed"]

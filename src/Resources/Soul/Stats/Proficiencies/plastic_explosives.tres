@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "Bombs that are planted and explode via a timer or detonator. This skills allows you to place and defuse them."
+catagory = "Explosives"
+value_base = -1
+formula = PoolStringArray( "wisdom 15" )

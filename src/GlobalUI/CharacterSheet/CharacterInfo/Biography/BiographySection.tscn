@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/GlobalUI/CharacterSheet/CharacterInfo/Biography/BiographySection.gd" type="Script" id=1]
+
+[node name="BiographySection" type="PanelContainer"]
+margin_right = 414.0
+margin_bottom = 238.0
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 407.0
+margin_bottom = 231.0
+
+[node name="SectionName" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 20.0
+
+[node name="SectionNameEdit" type="LineEdit" parent="VBoxContainer/SectionName"]
+visible = false
+margin_right = 376.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+placeholder_text = "Enter section name here..."
+placeholder_alpha = 0.25
+
+[node name="SectionNameLabel" type="Label" parent="VBoxContainer/SectionName"]
+margin_top = 3.0
+margin_right = 376.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Sex Life"
+
+[node name="VisibilityButton" type="Button" parent="VBoxContainer/SectionName"]
+margin_left = 380.0
+margin_right = 400.0
+margin_bottom = 20.0
+toggle_mode = true
+pressed = true
+text = "+"
+flat = true
+
+[node name="VSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 400.0
+margin_bottom = 28.0
+
+[node name="Section" type="ScrollContainer" parent="VBoxContainer"]
+margin_top = 32.0
+margin_right = 400.0
+margin_bottom = 224.0
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Section"]
+margin_right = 233.0
+margin_bottom = 14.0
+
+[node name="SectionEdit" type="TextEdit" parent="VBoxContainer/Section/MarginContainer"]
+visible = false
+margin_right = 233.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+wrap_enabled = true
+
+[node name="SectionPlaceholderText" type="Label" parent="VBoxContainer/Section/MarginContainer/SectionEdit"]
+self_modulate = Color( 1, 1, 1, 0.25 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.5
+margin_top = 5.5
+margin_right = -4.5
+margin_bottom = -5.5
+text = "Enter details here..."
+
+[node name="SectionLabel" type="Label" parent="VBoxContainer/Section/MarginContainer"]
+margin_right = 233.0
+margin_bottom = 14.0
+text = "John Everyman's sex is non-existent."

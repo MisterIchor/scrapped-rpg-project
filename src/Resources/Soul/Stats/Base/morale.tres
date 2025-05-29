@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/AttributeTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Morale"
+description = "Your mood in the current situation. Maintaining good morale amongst your party can make the differance between life and death."
+shortened_name = "MOR"
+catagory = "Core"
+base = 50
+hide = false
+display_as = 1

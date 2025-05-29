@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Defence"
+description = ""
+catagory = ""
+value_base = 0
+formula = [ {
+"container_name": "enderance",
+"operation": "add",
+"percentage_of_value": "15",
+"type": "arithmetic_with_stat",
+"value_name": "current"
+} ]
+add_type = 0

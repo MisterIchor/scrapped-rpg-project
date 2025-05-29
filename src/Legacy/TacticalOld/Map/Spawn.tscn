@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Modes/Encounter/Tactical/Map/Spawn.gd" type="Script" id=1]
+
+
+
+
+
+
+[node name="Spawn" type="Position2D"]
+position = Vector2( 447.163, 45.6123 )
+script = ExtResource( 1 )

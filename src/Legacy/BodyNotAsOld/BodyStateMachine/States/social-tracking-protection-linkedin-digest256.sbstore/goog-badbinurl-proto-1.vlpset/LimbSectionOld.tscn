@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Entities/Character/Body/Skeleton/Limbs/LimbSection.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/limbs/long.png" type="Texture" id=2]
+
+
+
+[node name="LimbSection" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+scale_limits = Vector2( 0.75, 0 )
+reset_front_position = null
+length_size = 25.0
+length_percentage_max = 1.0
+length_percentage_min = 0.0
+grab_can_pickup_items = false
+grab_can_equip_items = false
+grab_can_use_items = false
+
+[node name="Front" type="Node2D" parent="."]
+position = Vector2( 0, -25 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -12.5 )
+rotation = -1.5708
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2( 0, -12.5 )
+rotation = -1.5708
+polygon = PoolVector2Array( -13, -1.5, -12, -2.5, -11, -2.5, -10, -3.5, -9, -3.5, -8, -3.5, -7, -3.5, -6, -3.5, -5, -3.5, -4, -3.5, -3, -3.5, -2, -3.5, -1, -3.5, 0, -3.5, 1, -3.5, 2, -3.5, 3, -3.5, 4, -3.5, 5, -3.5, 6, -3.5, 7, -3.5, 8, -3.5, 9, -3.5, 10, -3.5, 11, -2.5, 12, -2.5, 13, -1.5, 13, 1.5, 12, 2.5, 11, 2.5, 10, 3.5, 9, 3.5, 8, 3.5, 7, 3.5, 6, 3.5, 5, 3.5, 4, 3.5, 3, 3.5, 2, 3.5, 1, 3.5, 0, 3.5, -1, 3.5, -2, 3.5, -3, 3.5, -4, 3.5, -5, 3.5, -6, 3.5, -7, 3.5, -8, 3.5, -9, 3.5, -10, 3.5, -11, 2.5, -12, 2.5, -13, 1.5 )
+__meta__ = {
+"_edit_lock_": true
+}

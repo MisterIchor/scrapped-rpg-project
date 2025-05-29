@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Modes/Encounter/Tactical/HUD/Party/CharacterStatus.gd" type="Script" id=1]
+[ext_resource path="res://src/Test/HRMonitor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Entities/Character/Portrait/Portrait.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Overlays/vignette.png" type="Texture" id=4]
+
+[node name="CharacterStatus" type="MarginContainer"]
+margin_right = 296.0
+margin_bottom = 440.0
+rect_min_size = Vector2( 97, 154 )
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 296.0
+margin_bottom = 440.0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 296.0
+margin_bottom = 272.0
+size_flags_vertical = 3
+
+[node name="Portrait" parent="VBoxContainer/MarginContainer" instance=ExtResource( 3 )]
+margin_top = 0.0
+margin_right = 296.0
+margin_bottom = 272.0
+size_flags_horizontal = 1
+
+[node name="CRTVignette" type="TextureRect" parent="VBoxContainer/MarginContainer"]
+self_modulate = Color( 1, 1, 1, 0.7 )
+margin_right = 296.0
+margin_bottom = 272.0
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HRMonitor" parent="VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 276.0
+margin_right = 296.0
+margin_bottom = 440.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+
+[editable path="VBoxContainer/MarginContainer/Portrait"]

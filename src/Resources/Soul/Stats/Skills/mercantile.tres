@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "he ability to bargain with merchants to receive lower prices, as well as identifying the value of items."
+catagory = "Social"
+value_base = 0
+formula = PoolStringArray( "charisma 10", "intelligence 10" )

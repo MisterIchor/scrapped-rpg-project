@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Entities/Items/DocumentsRevised/DocumentTabsContainer.gd" type="Script" id=1]
+
+[node name="DocumentTabsContainer" type="Container"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -336.0
+margin_top = -292.0
+margin_right = 358.0
+margin_bottom = 292.0
+script = ExtResource( 1 )
+_selected_tab = -1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+margin_right = 694.0
+margin_bottom = 584.0
+text = "Penis"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+visible = false
+margin_right = 694.0
+margin_bottom = 584.0
+text = "Vagina"
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+visible = false
+margin_right = 694.0
+margin_bottom = 584.0
+text = "Bollocks"

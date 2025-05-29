@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/AnswerTemplate.gd" type="Script" id=1]
+[ext_resource path="res://src/Resources/Encounter/test/dialogue/questions/questions.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+dialogue = "I want to ask a question."
+go_to = ExtResource( 2 )
+end_dialogue = false
+end_type = ""
+ins_conditions = [  ]
+ins_dialogue_to_add = ""
+br_branches = {
+}
+br_conditions = [  ]
+br_add_branch = null

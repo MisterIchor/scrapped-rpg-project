@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/graphics/limbs/circle.png" type="Texture" id=2]
+[ext_resource path="res://src/Test/Face/FaceTest.gd" type="Script" id=3]
+
+[node name="FaceTest" type="Node2D"]
+position = Vector2( 1, 0 )
+script = ExtResource( 3 )
+default_pos = {
+"face": Vector2( 127.25, 109 ),
+"left_eye": Vector2( 91, 79 ),
+"left_pupil": Vector2( 0, 0 ),
+"look_pos": Vector2( 127, 79 ),
+"right_eye": Vector2( 163.5, 79 ),
+"right_pupil": Vector2( 0, 0 )
+}
+
+[node name="circle" type="Sprite" parent="."]
+position = Vector2( 127.386, 108.774 )
+scale = Vector2( 27, 27 )
+texture = ExtResource( 2 )
+
+[node name="LeftEye" type="Sprite" parent="."]
+position = Vector2( 91.4072, 78.3221 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+
+[node name="Pupil" type="Sprite" parent="LeftEye"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0.135719, -0.225975 )
+rotation = 1.5708
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="RightEye" type="Sprite" parent="."]
+position = Vector2( 163.907, 78.3221 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+
+[node name="Pupil" type="Sprite" parent="RightEye"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0.135719, -0.225975 )
+rotation = 1.5708
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="LookPos" type="Position2D" parent="."]
+position = Vector2( 127.136, 78.774 )

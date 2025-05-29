@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Entities/Items/DocumentsRevised/DocumentTab.gd" type="Script" id=1]
+
+[node name="DocumentTab" type="Button"]
+margin_left = 20.0
+margin_right = 108.0
+margin_bottom = 20.0
+rect_rotation = 90.0
+script = ExtResource( 1 )

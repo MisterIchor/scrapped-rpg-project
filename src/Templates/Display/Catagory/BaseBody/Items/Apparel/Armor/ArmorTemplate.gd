@@ -1,0 +1,2 @@
+extends ApparelTemplate
+class_name ArmorTemplate

@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/GlobalUI/CharacterSheet/Inventory/ItemCatagory.gd" type="Script" id=1]
+
+[node name="ItemCatagory" type="PanelContainer"]
+margin_right = 643.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 636.0
+margin_bottom = 269.0
+
+[node name="List" type="HBoxContainer" parent="ScrollContainer"]
+margin_right = 629.0
+margin_bottom = 262.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Name" type="VBoxContainer" parent="ScrollContainer/List"]
+margin_right = 38.0
+margin_bottom = 262.0
+
+[node name="Label" type="Label" parent="ScrollContainer/List/Name"]
+margin_right = 38.0
+margin_bottom = 14.0
+text = "Name"
+align = 1
+valign = 1
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/List/Name"]
+margin_top = 18.0
+margin_right = 38.0
+margin_bottom = 22.0

@@ -1,0 +1,170 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Test/3d test/Body3D/new folder/Skeleton3D.gd" type="Script" id=1]
+[ext_resource path="res://src/Tools/SkeletonTool/SkeletonToolUI.gd" type="Script" id=2]
+[ext_resource path="res://src/Tools/SkeletonTool/OptionsContainer.gd" type="Script" id=3]
+[ext_resource path="res://src/Tools/SkeletonTool/NamePopup.gd" type="Script" id=4]
+
+[node name="SkeletonToolUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1273.0
+margin_bottom = 713.0
+size_flags_vertical = 3
+
+[node name="AddPartContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+margin_right = 1266.0
+margin_bottom = 20.0
+
+[node name="AddPartButton" type="Button" parent="PanelContainer/VBoxContainer/AddPartContainer"]
+margin_right = 49.0
+margin_bottom = 20.0
+size_flags_horizontal = 2
+disabled = true
+text = "Add..."
+
+[node name="ShowWireframeButton" type="Button" parent="PanelContainer/VBoxContainer/AddPartContainer"]
+margin_left = 1150.0
+margin_right = 1266.0
+margin_bottom = 20.0
+toggle_mode = true
+text = "Show Wireframe"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 1266.0
+margin_bottom = 682.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+margin_right = 631.0
+margin_bottom = 658.0
+size_flags_horizontal = 3
+
+[node name="SkeletonTree" type="Tree" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 631.0
+margin_bottom = 363.0
+size_flags_vertical = 3
+
+[node name="OptionsContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 367.0
+margin_right = 631.0
+margin_bottom = 658.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+script = ExtResource( 3 )
+
+[node name="ValuesContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/OptionsContainer"]
+margin_right = 631.0
+margin_bottom = 291.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NoSelectionContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = 391.0
+margin_right = 631.0
+margin_bottom = 682.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/NoSelectionContainer"]
+margin_left = 7.0
+margin_top = 138.0
+margin_right = 624.0
+margin_bottom = 152.0
+text = "Select a limb or a section from the tree on the left."
+align = 1
+
+[node name="SkeletonView" type="ViewportContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+margin_left = 635.0
+margin_right = 1266.0
+margin_bottom = 658.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="PanelContainer/VBoxContainer/HBoxContainer/SkeletonView"]
+size = Vector2( 631, 658 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="SkeletonCamera" type="Camera" parent="PanelContainer/VBoxContainer/HBoxContainer/SkeletonView/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.02735 )
+current = true
+
+[node name="Skeleton3D" type="Spatial" parent="PanelContainer/VBoxContainer/HBoxContainer/SkeletonView/Viewport"]
+script = ExtResource( 1 )
+
+[node name="SkeletonOptions" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+margin_top = 686.0
+margin_right = 1266.0
+margin_bottom = 706.0
+
+[node name="ExitButton" type="Button" parent="PanelContainer/VBoxContainer/SkeletonOptions"]
+margin_right = 152.0
+margin_bottom = 20.0
+text = "Return to Editor Menu"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/SkeletonOptions"]
+margin_left = 156.0
+margin_right = 604.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="SaveSkeletonButton" type="Button" parent="PanelContainer/VBoxContainer/SkeletonOptions"]
+margin_left = 608.0
+margin_right = 708.0
+margin_bottom = 20.0
+text = "Save Skeleton"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/SkeletonOptions"]
+margin_left = 712.0
+margin_right = 1161.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="LoadSkeletonButton" type="Button" parent="PanelContainer/VBoxContainer/SkeletonOptions"]
+margin_left = 1165.0
+margin_right = 1266.0
+margin_bottom = 20.0
+text = "Load Skeleton"
+
+[node name="NamePopup" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.345098 )
+script = ExtResource( 4 )
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="NamePopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -123.0
+margin_top = -35.0
+margin_right = 123.0
+margin_bottom = 35.0
+popup_exclusive = true
+window_title = "Rename yermumpog"
+
+[node name="LineEdit" type="LineEdit" parent="NamePopup/ConfirmationDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = -27.0
+margin_right = 115.0
+margin_bottom = -1.0

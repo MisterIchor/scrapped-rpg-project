@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Test/3d test/generation/Tile.gd" type="Script" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0.5, 0, 0.5 )
+
+[node name="Tile" type="StaticBody"]
+script = ExtResource( 1 )
+top_left = Vector3( 0, 0, 0 )
+top_right = Vector3( 1, 0, 0 )
+bottom_left = Vector3( 0, 0, 1 )
+bottom_right = Vector3( 1, 0, 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "Having a good set of armor can prolong the life of anyone brave or foolhardy enough to explore the world of Shatterrock. From full plate to bullletproof vests, the Armor skill helps alleviate penalties brought upon from wearing armor. When wearing armor, the following stats are penalized based on the weight of your armor:
+    • Dodge
+    • Accuracy (only if armor skill is significantly insufficient for current armor)
+    • Sight and Awareness (Helmets only)
+    • AP costs for moving, turning, and changing stances.
+Wearing armor also penalizes any skill that uses AGL or DEX."
+catagory = ""
+value_base = -1
+formula = PoolStringArray( "strength 5", "enderance 10" )

@@ -1,0 +1,133 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Tools/DocumentMaker.gd" type="Script" id=1]
+[ext_resource path="res://src/Entities/Items/DocumentsRevised/Page.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Entities/Items/DocumentsRevised/PageContainer.gd" type="Script" id=3]
+
+[node name="Document" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.45098 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+document = "res://assets/saved/documents/Test.document"
+sections_per_page = 2
+amount_of_pages = 2
+cover = {
+"back": false,
+"front": false
+}
+textex_title = "Test"
+textex_author = "MisterIchor"
+textex_description = "This is a test."
+textex_export_text = null
+
+[node name="PageContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -300.0
+margin_right = 750.0
+margin_bottom = 300.0
+rect_pivot_offset = Vector2( 250, 300 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+allow_zoom = true
+max_zoom = 2.0
+zoom_scale = 0.05
+grab_type = "RELATIVE"
+
+[node name="Front" parent="PageContainer" instance=ExtResource( 2 )]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 1000.0
+margin_bottom = 600.0
+
+[node name="Page" parent="PageContainer" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 1000.0
+margin_bottom = 600.0
+
+[node name="Page2" parent="PageContainer" instance=ExtResource( 2 )]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 1000.0
+margin_bottom = 600.0
+
+[node name="ExitButton" type="Button" parent="."]
+anchor_left = 0.984
+anchor_right = 1.0
+anchor_bottom = 0.028
+margin_left = 0.47998
+margin_top = 2.0
+margin_bottom = 1.84
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DocumentControls" type="HBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -342.5
+margin_top = -34.0
+margin_right = 342.5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PreviousButton" type="Button" parent="DocumentControls"]
+margin_right = 35.0
+margin_bottom = 34.0
+size_flags_horizontal = 0
+text = "<---"
+
+[node name="CenterContainer" type="CenterContainer" parent="DocumentControls"]
+margin_left = 39.0
+margin_right = 646.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+
+[node name="CenterButton" type="Button" parent="DocumentControls/CenterContainer"]
+margin_left = 241.0
+margin_top = 7.0
+margin_right = 366.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+text = "Center Document"
+
+[node name="NextButton" type="Button" parent="DocumentControls"]
+margin_left = 650.0
+margin_right = 685.0
+margin_bottom = 34.0
+size_flags_horizontal = 0
+text = "--->"

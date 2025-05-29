@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/GlobalUI/AttributeInfo.gd" type="Script" id=1]
+
+[node name="AttributeInfo" type="Button"]
+margin_right = 152.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Details" type="PanelContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 14.0
+rect_scale = Vector2( 1, 1e-05 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DetailsContainer" type="VBoxContainer" parent="Details"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 145.0
+margin_bottom = 7.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.033
+anchor_top = 0.15
+anchor_right = 0.967
+anchor_bottom = 0.95
+margin_left = -0.0159998
+margin_right = 0.0159912
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttributeLabel" type="Label" parent="HBoxContainer"]
+margin_top = 1.0
+margin_right = 69.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+
+[node name="TotalLabel" type="Label" parent="HBoxContainer"]
+margin_left = 73.0
+margin_top = 1.0
+margin_right = 142.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+align = 2
+
+[node name="HoverTimer" type="Timer" parent="."]
+wait_time = 0.075
+one_shot = true

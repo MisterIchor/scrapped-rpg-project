@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=1]
+
+
+
+
+
+
+
+
+
+
+
+[resource]
+script = ExtResource( 1 )
+description = "Semi-automatic handguns. Pull the trigger and a bullet flies out. Can fire multiple bullets at a time, but the caliber is typically weaker than other handguns."
+catagory = "Side Arms"
+value_base = -1
+formula = PoolStringArray( "agility 15" )

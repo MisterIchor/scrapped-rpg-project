@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Zho.wav-c1e25f8138c31c355f3ee1a3ac0a9b80.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogue_samples/Zho.wav"
+dest_files=[ "res://.import/Zho.wav-c1e25f8138c31c355f3ee1a3ac0a9b80.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

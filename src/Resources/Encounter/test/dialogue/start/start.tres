@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/DialogueTemplate.gd" type="Script" id=1]
+[ext_resource path="res://assets/music/travel/moving_along.ogg" type="AudioStream" id=2]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource( 1 )
+dialogue = "The man approaches and greets you with a simile. 
+
+\"How may I help you, sir?\""
+answers = [ "res://src/Resources/Encounter/test/dialogue/start/answers/ask_question.tres", "res://src/Resources/Encounter/test/dialogue/start/answers/request_luggage.tres", "res://src/Resources/Encounter/test/dialogue/start/answers/leaving.tres" ]
+answers_as_resource = false
+bg_screen = "BOX"
+mu_song = ExtResource( 2 )
+mu_volume = 100
+mu_pitch = 100

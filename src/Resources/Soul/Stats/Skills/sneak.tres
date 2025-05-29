@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/CalculatedAttributeTemplate.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+name = ""
+description = "The ability to move silently and hide from foes."
+icon = ExtResource( 1 )
+base = 50
+hide = false
+catagory = "Instinct"
+formula = [ "dexterity 15" ]
+_add_type = 0

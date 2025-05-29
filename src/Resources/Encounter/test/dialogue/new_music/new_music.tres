@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Templates/Encounter/Dialogue/DialogueTemplate.gd" type="Script" id=1]
+[ext_resource path="res://assets/music/travel/journey.ogg" type="AudioStream" id=2]
+
+[resource]
+script = ExtResource( 1 )
+dialogue = "\"Eh... sure. 
+
+Here, try this one. It's the only other one I have.\""
+answers = [ "res://src/Resources/Encounter/test/dialogue/new_music/answers/thanks.tres" ]
+answers_as_resource = false
+bg_screen = "BOX"
+mu_song = ExtResource( 2 )
+mu_volume = 100
+mu_pitch = 100

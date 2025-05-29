@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/Stats/TraitTemplate.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = ""
+description = ""
+catagory = "other"
+type = 1
+modifiers = {
+"attribute_points": 35,
+"skill_profieciencies": 2
+}

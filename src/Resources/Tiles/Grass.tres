@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Templates/Display/Catagory/BaseBody/Tiles/TileTemplate.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/limbs/circle.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/tactical/grass.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+name = "Grass"
+description = ""
+icon = ExtResource( 3 )
+catagory = "other"
+health_base = 30
+defense_base = 0
+sprite = ExtResource( 2 )
+collision_data = ""
+sound_bank = {
+"damaged": [  ],
+"destroyed": [  ],
+"footstep": [  ],
+"impact_blunt": [  ],
+"impact_pierce": [  ],
+"impact_slash": [  ]
+}
+has_collision = true

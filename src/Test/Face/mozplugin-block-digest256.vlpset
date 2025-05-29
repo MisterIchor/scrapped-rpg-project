@@ -1,0 +1,33 @@
+extends Node2D
+
+onready var characters : Node = ($Characters as Node)
+onready var tactical_map : Node = ($TacticalMap as Node)
+
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("next_turn"):
+		if BattleSystem.turn_timer.is_stopped():
+			BattleSystem.execute_turn()
+
+
+func _ready() -> void:
+	BattleSystem.teams.party = PartySystem.get_party_members()
+	deploy_characters()
+	
+	for i in characters.get_children():
+		i.connect("path_requested", tactical_map, "_on_path_requested")
+#		i.connect("point_reached", tactical_map, "_on_Body_point_reached")
+		tactical_map.connect("path_sent", i, "_on_path_sent")
+		tactical_map.update_character_position(i, i.get_character_position())
+
+
+
+func deploy_characters() -> void:
+	var spawn_list : Dictionary = tactical_map.get_spawn_points()
+	var chars : Array = characters.get_children()
+	
+	for i in range(chars.size()):
+		var character : Node = chars[i]
+		
+		character.set_character_position(spawn_list["party"][i])
