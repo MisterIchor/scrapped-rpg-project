@@ -1,1 +1,1 @@
-## Free for the taking, if you can decihper this ugly mess.
+## Free for the taking, if you can decipher this ugly mess.
